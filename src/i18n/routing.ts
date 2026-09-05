@@ -1,7 +1,7 @@
 import { defineRouting } from "next-intl/routing";
 
 /**
- * Routing i18n de HOSANNA GROUP ENGINEERING.
+ * Routing i18n de HOSANA GROUP ENGINEERING.
  *
  * - Français = langue par défaut, sans préfixe d'URL (`/expertises`).
  * - Anglais = préfixe `/en` avec des slugs dédiés au SEO (`/en/expertise`).

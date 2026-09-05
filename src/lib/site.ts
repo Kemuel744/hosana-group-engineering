@@ -1,27 +1,29 @@
 /**
  * Informations officielles de l'entreprise.
  *
- * Source : plaquettes commerciales HOSANNA GROUP ENGINEERING (sept. 2026).
+ * Nom retenu : « HOSANA GROUP ENGINEERING » (graphie du logo, confirmée par le
+ * client). Les plaquettes portent « HOSANNA ».
+ *
+ * Source des autres informations : plaquettes commerciales (sept. 2026).
  * ⚠️ À faire valider par le client avant mise en ligne :
- *   - graphie retenue : « HOSANNA » (2 N) — le logo actuel porte « HOSANA ».
  *   - numéros de téléphone (plusieurs variantes sur les supports existants).
  *   - adresse e-mail professionnelle (contact@… au lieu du Gmail actuel).
  *   - effectif « 30 personnes » et autres chiffres à confirmer.
  */
 
 export const site = {
-  name: "HOSANNA GROUP ENGINEERING",
-  shortName: "Hosanna Group Engineering",
+  name: "HOSANA GROUP ENGINEERING",
+  shortName: "Hosana Group Engineering",
   legalId: "P21000000195306W", // NIU
   foundedRegion: "République du Congo & Afrique centrale",
 
   domain: {
     // À réserver — cf. cahier des charges §20.
-    primary: "hosannagroupengineering.com",
-    fallback: "hosanna-engineering.com",
+    primary: "hosanagroupengineering.com",
+    fallback: "hosanaengineering.com",
   },
 
-  url: "https://hosannagroupengineering.com",
+  url: "https://hosanagroupengineering.com",
 
   taglines: {
     fr: "L'expertise au service de la mer, de l'industrie et du développement durable",

@@ -1,8 +1,8 @@
 {
-  "name": "hosanna-group-engineering",
+  "name": "hosana-group-engineering",
   "version": "0.1.0",
   "private": true,
-  "description": "Site web corporate de HOSANNA GROUP ENGINEERING - ingenierie maritime, dragage, travaux sous-marins, BTP et services industriels.",
+  "description": "Site web corporate de HOSANA GROUP ENGINEERING - ingenierie maritime, dragage, travaux sous-marins, BTP et services industriels.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

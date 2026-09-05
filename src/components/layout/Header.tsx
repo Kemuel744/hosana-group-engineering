@@ -46,7 +46,7 @@ export function Header() {
       )}
     >
       <div className="container-hge flex h-16 items-center justify-between gap-4 lg:h-20">
-        <Link href="/" aria-label="HOSANNA GROUP ENGINEERING — accueil">
+        <Link href="/" aria-label="HOSANA GROUP ENGINEERING — accueil">
           <Logo tone="light" />
         </Link>
 

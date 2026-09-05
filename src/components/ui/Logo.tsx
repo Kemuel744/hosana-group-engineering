@@ -1,7 +1,7 @@
 import { cn } from "@/lib/cn";
 
 /**
- * Marque HOSANNA GROUP ENGINEERING : emblème maritime + logotype.
+ * Marque HOSANA GROUP ENGINEERING : emblème maritime + logotype.
  * L'emblème est un SVG autonome (dégradé bleu, vague, bulles) qui reprend
  * l'univers du logo fourni sans en copier le tracé exact.
  * Le logo original reste disponible dans /public/brand/ pour l'impression et l'OG.
@@ -22,7 +22,7 @@ export function Logo({
         viewBox="0 0 48 48"
         className="h-9 w-9 shrink-0"
         role="img"
-        aria-label="HOSANNA GROUP ENGINEERING"
+        aria-label="HOSANA GROUP ENGINEERING"
       >
         <defs>
           <linearGradient id="hge-emblem" x1="0" y1="0" x2="0" y2="1">
@@ -58,7 +58,7 @@ export function Logo({
               onLight ? "text-navy-900" : "text-white",
             )}
           >
-            HOSANNA
+            HOSANA
           </span>
           <span
             className={cn(

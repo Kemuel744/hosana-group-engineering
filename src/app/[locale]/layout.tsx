@@ -50,8 +50,8 @@ export async function generateMetadata({
     },
     description:
       locale === "en"
-        ? "HOSANNA GROUP ENGINEERING — maritime, industrial and infrastructure engineering: dredging, underwater works, bathymetry, shipbuilding, port works, construction and industrial services in the Republic of Congo and Central Africa."
-        : "HOSANNA GROUP ENGINEERING — ingénierie maritime, industrielle et infrastructurelle : dragage, travaux sous-marins, bathymétrie, construction navale, travaux portuaires, BTP et services industriels en République du Congo et en Afrique centrale.",
+        ? "HOSANA GROUP ENGINEERING — maritime, industrial and infrastructure engineering: dredging, underwater works, bathymetry, shipbuilding, port works, construction and industrial services in the Republic of Congo and Central Africa."
+        : "HOSANA GROUP ENGINEERING — ingénierie maritime, industrielle et infrastructurelle : dragage, travaux sous-marins, bathymétrie, construction navale, travaux portuaires, BTP et services industriels en République du Congo et en Afrique centrale.",
     applicationName: site.name,
     alternates: {
       canonical: "/",

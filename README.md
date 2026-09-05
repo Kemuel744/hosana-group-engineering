@@ -1,6 +1,6 @@
-# HOSANNA GROUP ENGINEERING — site web corporate
+# HOSANA GROUP ENGINEERING — site web corporate
 
-Site vitrine bilingue (FR / EN) pour HOSANNA GROUP ENGINEERING : ingénierie
+Site vitrine bilingue (FR / EN) pour HOSANA GROUP ENGINEERING : ingénierie
 maritime, dragage, travaux sous-marins, bathymétrie, construction navale, BTP et
 services industriels — République du Congo & Afrique centrale.
 
@@ -49,12 +49,17 @@ Tout le contenu métier vit dans `src/content/*` et `src/lib/site.ts`, en objets
 `{ fr, en }` typés. Objectif : migration directe vers un CMS headless ou Supabase
 sans toucher aux composants (cf. proposition §10–11).
 
+## Nom retenu
+
+**HOSANA GROUP ENGINEERING** — graphie du logo, confirmée par le client.
+Les plaquettes commerciales portent « HOSANNA » (2 N) : à corriger sur les
+futurs supports.
+
 ## ⚠️ À valider avec le client avant mise en ligne
 
 Repris des affiches, **non confirmé** :
 
-- **Graphie du nom** : « HOSANNA » (2 N) retenu ici ; le logo porte « HOSANA ».
-- **Nom de domaine** à réserver (`hosannagroupengineering.com`).
+- **Nom de domaine** à réserver (`hosanagroupengineering.com`).
 - **Téléphones** : plusieurs variantes sur les supports — un seul jeu retenu
   dans `src/lib/site.ts`.
 - **E-mail professionnel** (`contact@…`) au lieu du Gmail actuel.
