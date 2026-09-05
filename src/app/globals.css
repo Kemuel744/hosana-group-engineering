@@ -1,0 +1,204 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------ *
+ * HOSANNA GROUP ENGINEERING — Design system
+ * Style : « Premium Industrial & Maritime »
+ * Bleu marine (principal) · bleu océan (secondaire) · doré (premium)
+ * ------------------------------------------------------------------ */
+
+@theme {
+  /* Bleu marine — couleur principale */
+  --color-navy-50: #eef3fb;
+  --color-navy-100: #d6e2f4;
+  --color-navy-200: #adc4e8;
+  --color-navy-300: #7c9fd6;
+  --color-navy-400: #4a72b8;
+  --color-navy-500: #2857a0;
+  --color-navy-600: #1c437f;
+  --color-navy-700: #163665;
+  --color-navy-800: #0f2749;
+  --color-navy-900: #0a1c37;
+  --color-navy-950: #050f20;
+
+  /* Bleu océan — couleur secondaire */
+  --color-ocean-50: #eaf6fd;
+  --color-ocean-100: #cdeafa;
+  --color-ocean-200: #9fd7f4;
+  --color-ocean-300: #63bced;
+  --color-ocean-400: #33a0de;
+  --color-ocean-500: #1a83c4;
+  --color-ocean-600: #1568a2;
+  --color-ocean-700: #155483;
+  --color-ocean-800: #17466c;
+  --color-ocean-900: #163b5b;
+
+  /* Doré — accent premium, à utiliser avec parcimonie */
+  --color-gold-50: #fbf6ea;
+  --color-gold-100: #f4e7c6;
+  --color-gold-200: #e9cf8f;
+  --color-gold-300: #ddb75c;
+  --color-gold-400: #d0a13a;
+  --color-gold-500: #c9a24b;
+  --color-gold-600: #a67c2e;
+  --color-gold-700: #825f26;
+
+  /* Neutres — blanc & gris métallique */
+  --color-steel-50: #f5f7fa;
+  --color-steel-100: #eaeef3;
+  --color-steel-200: #d7dee8;
+  --color-steel-300: #b7c2d1;
+  --color-steel-400: #8b99ac;
+  --color-steel-500: #64748b;
+  --color-steel-600: #4a586b;
+  --color-steel-700: #384456;
+  --color-steel-800: #263140;
+  --color-steel-900: #18212e;
+
+  /* Rôles sémantiques */
+  --color-background: #ffffff;
+  --color-surface: var(--color-steel-50);
+  --color-surface-strong: var(--color-navy-900);
+  --color-foreground: var(--color-navy-950);
+  --color-muted: var(--color-steel-500);
+  --color-border: var(--color-steel-200);
+  --color-primary: var(--color-navy-800);
+  --color-accent: var(--color-ocean-500);
+
+  /* Typographie */
+  --font-sans: var(--font-barlow), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-display: var(--font-barlow-condensed), var(--font-barlow), ui-sans-serif,
+    system-ui, sans-serif;
+
+  /* Container */
+  --spacing-gutter: 1.5rem;
+
+  /* Rythme d'animation */
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    scroll-padding-top: 6rem;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-feature-settings: "kern", "liga", "calt";
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+  }
+
+  ::selection {
+    background-color: var(--color-ocean-500);
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-ocean-500);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  /* Respect des préférences de mouvement réduit */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  /* Conteneur centré standard */
+  .container-hge {
+    width: 100%;
+    margin-inline: auto;
+    max-width: 80rem;
+    padding-inline: var(--spacing-gutter);
+  }
+
+  /* Filet doré discret sous les titres de section */
+  .rule-gold::after {
+    content: "";
+    display: block;
+    width: 3.5rem;
+    height: 3px;
+    margin-top: 1rem;
+    background: linear-gradient(
+      90deg,
+      var(--color-gold-500),
+      var(--color-gold-300)
+    );
+  }
+
+  /* Dégradé maritime réutilisable (héros, blocs forts) */
+  .bg-maritime {
+    background-color: var(--color-navy-900);
+    background-image:
+      radial-gradient(
+        60rem 40rem at 15% -10%,
+        rgba(51, 160, 222, 0.35),
+        transparent 60%
+      ),
+      radial-gradient(
+        50rem 40rem at 100% 0%,
+        rgba(20, 84, 131, 0.55),
+        transparent 55%
+      ),
+      linear-gradient(180deg, var(--color-navy-900), var(--color-navy-950));
+  }
+
+  /* Motif de vagues très léger pour les fonds clairs */
+  .bg-waves {
+    background-color: var(--color-surface);
+    background-image: radial-gradient(
+      circle at 1px 1px,
+      var(--color-steel-200) 1px,
+      transparent 0
+    );
+    background-size: 28px 28px;
+  }
+}
+
+@layer utilities {
+  .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    animation: reveal 0.7s var(--ease-out-soft) forwards;
+  }
+
+  @keyframes reveal {
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
