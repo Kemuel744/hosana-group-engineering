@@ -20,8 +20,11 @@ export function LocaleSwitcher({ tone = "dark" }: { tone?: "dark" | "light" }) {
   function switchTo(next: string) {
     if (next === locale) return;
     startTransition(() => {
-      // @ts-expect-error -- les params dynamiques éventuels sont transmis tels quels
-      router.replace({ pathname, params }, { locale: next });
+      router.replace(
+        // @ts-expect-error -- `params` transmet les segments dynamiques éventuels
+        { pathname, params },
+        { locale: next },
+      );
     });
   }
 

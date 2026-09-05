@@ -16,7 +16,7 @@ export async function ExpertiseCard({
   const locale = await getLocale();
   return (
     <Link
-      href={{ pathname: "/expertises/[slug]", params: { slug: expertise.slug } }}
+      href={`/expertises/${expertise.slug}`}
       className={cn(
         "group flex flex-col gap-4 border border-border bg-background p-6 transition-colors hover:border-ocean-400 hover:bg-steel-50",
         className,

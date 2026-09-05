@@ -47,10 +47,7 @@ export async function Footer() {
             <ul className="mt-4 space-y-2 text-sm">
               {featuredExpertises.map((e) => (
                 <li key={e.slug}>
-                  <Link
-                    href={{ pathname: "/expertises/[slug]", params: { slug: e.slug } }}
-                    className="hover:text-white"
-                  >
+                  <Link href={`/expertises/${e.slug}`} className="hover:text-white">
                     {tr(e.title, locale)}
                   </Link>
                 </li>
