@@ -11,8 +11,26 @@ services industriels — République du Congo & Afrique centrale.
 | Framework | Next.js 16 (App Router, Turbopack) |
 | Langage | TypeScript |
 | UI | Tailwind CSS v4 (design system dans `src/app/globals.css`) |
-| i18n | next-intl (FR par défaut sans préfixe, `/en/…` avec slugs SEO dédiés) |
+| Typo | Poppins (titres) + Inter (texte) via `next/font` |
+| i18n | next-intl (FR par défaut sans préfixe, `/en/…`) |
 | Icônes | lucide-react |
+
+## Design
+
+L'UI suit le **template validé par le client** (maquette d'accueil fournie
+sept. 2026) : barre utilitaire, header à menus déroulants + recherche, hero
+plein cadre avec bandeau de stats, sections « Qui sommes-nous / Domaines
+d'expertise / Moyens opérationnels / Réalisations / Partenaires », pied de page
+5 colonnes avec carte d'Afrique. Palette bleu marine / bleu vif / blanc, coins
+arrondis. Tokens dans `src/app/globals.css` (`@theme`).
+
+### Images
+
+Aucune photo réelle n'étant disponible, les emplacements image affichent un
+aplat dégradé bleu + icône via `<MediaSlot>`. Pour intégrer les vraies photos :
+déposer les fichiers dans `public/media/` et renseigner la prop `src` de
+`<MediaSlot>` (hero, cartes expertises/moyens/réalisations, portrait équipe).
+La bascule vers `next/image` optimisé est automatique.
 
 ## Démarrage
 
@@ -33,10 +51,11 @@ src/
                           actualités, contact, devis)
   app/sitemap.ts          Sitemap FR/EN + hreflang
   app/robots.ts | manifest.ts
-  i18n/                   routing (locales + pathnames localisés), navigation, request
+  i18n/                   routing (locales fr/en), navigation, request
   proxy.ts                middleware next-intl (Next 16 = « proxy »)
-  content/                Couche de données typée (source : affiches) —
-                          expertises, équipements, secteurs, partenaires, valeurs
+  content/                Couche de données typée (source : affiches + template) —
+                          expertises, équipements, réalisations, secteurs,
+                          partenaires, valeurs
   lib/site.ts             Constantes entreprise (nom, contacts, réseaux, NIU)
   components/             ui/ · layout/ · cards/ · blocks/ · forms/
 messages/                 fr.json · en.json (chaînes d'interface)
@@ -66,13 +85,20 @@ Repris des affiches, **non confirmé** :
 - **Chiffres clés** (« 30 collaborateurs », « 16+ domaines »…) — `src/lib/site.ts`.
 - **Caractéristiques des équipements** : marquées « à confirmer » dans
   `src/content/equipements.ts` — aucun chiffre ne doit être inventé.
-- **Logos clients / partenaires** : `authorized: false` dans
-  `src/content/partenaires.ts` → masqués tant que l'autorisation écrite n'est pas
-  obtenue. « Bolloré Transport & Logistics » : marque cédée à MSC, à retirer.
-- **Photos réelles** de chantiers / équipements / réalisations (emplacements
-  prévus dans les composants et `public/media/`). Ne pas présenter d'images
-  d'illustration comme des réalisations.
+- **Logos clients / partenaires** : affichés en toutes lettres (le template les
+  montre) dans `src/content/partenaires.ts` avec `authorized: true` — mais les
+  **autorisations écrites restent à obtenir**. « Bolloré Transport &
+  Logistics » : activité cédée à MSC, nom à actualiser. Déposer les vrais logos
+  dans `public/brand/partners/`.
+- **Réalisations** : les 3 projets de `src/content/realisations.ts` sont repris
+  du template — contexte, dates, volumes et photos réels à fournir (une étude de
+  cas par projet, cf. cahier des charges §6-7).
+- **Photos réelles** de chantiers / équipements / réalisations / équipe.
+  Ne pas présenter d'images d'illustration comme des réalisations.
 - **Traductions EN** : à faire relire par un traducteur technique.
+- **Secteurs d'activité / Documentation** : retirés du menu principal pour
+  coller au template ; pages toujours accessibles par URL (`/secteurs`,
+  `/documentation`).
 
 ## Reste à faire (phase développement)
 

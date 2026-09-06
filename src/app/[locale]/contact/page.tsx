@@ -47,8 +47,8 @@ export default async function ContactPage({
           <div className="space-y-6">
             <ul className="space-y-4 text-sm">
               <li className="flex gap-3">
-                <Icon name="MapPin" className="mt-0.5 h-5 w-5 shrink-0 text-ocean-600" />
-                <span className="text-steel-700">
+                <Icon name="MapPin" className="mt-0.5 h-5 w-5 shrink-0 text-brand-600" />
+                <span className="text-ink-700">
                   {address.line1}, {address.line2}
                   <br />
                   {address.city}, {address.country}
@@ -56,26 +56,26 @@ export default async function ContactPage({
               </li>
               {phones.map((p) => (
                 <li key={p} className="flex gap-3">
-                  <Icon name="Phone" className="mt-0.5 h-5 w-5 shrink-0 text-ocean-600" />
-                  <a href={`tel:${p.replace(/\s/g, "")}`} className="text-steel-700 hover:text-navy-900">
+                  <Icon name="Phone" className="mt-0.5 h-5 w-5 shrink-0 text-brand-600" />
+                  <a href={`tel:${p.replace(/\s/g, "")}`} className="text-ink-700 hover:text-navy-900">
                     {p}
                   </a>
                 </li>
               ))}
               <li className="flex gap-3">
-                <Icon name="MessageCircle" className="mt-0.5 h-5 w-5 shrink-0 text-ocean-600" />
+                <Icon name="MessageCircle" className="mt-0.5 h-5 w-5 shrink-0 text-brand-600" />
                 <a
                   href={whatsappLink()}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-steel-700 hover:text-navy-900"
+                  className="text-ink-700 hover:text-navy-900"
                 >
                   {common("whatsapp")} · {whatsapp}
                 </a>
               </li>
               <li className="flex gap-3">
-                <Icon name="Mail" className="mt-0.5 h-5 w-5 shrink-0 text-ocean-600" />
-                <a href={`mailto:${email}`} className="text-steel-700 hover:text-navy-900">
+                <Icon name="Mail" className="mt-0.5 h-5 w-5 shrink-0 text-brand-600" />
+                <a href={`mailto:${email}`} className="text-ink-700 hover:text-navy-900">
                   {email}
                 </a>
               </li>
@@ -91,7 +91,7 @@ export default async function ContactPage({
                 loading="lazy"
                 className="mt-4 aspect-[4/3] w-full border border-border"
               />
-              <p className="mt-2 text-xs text-steel-400">{common("toBeValidated")}</p>
+              <p className="mt-2 text-xs text-ink-400">{common("toBeValidated")}</p>
             </div>
           </div>
         </div>

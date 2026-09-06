@@ -28,8 +28,8 @@ export default async function ExpertisesPage({
 
   return (
     <>
-      <PageHeader kicker={t("kicker")} title={t("title")} intro={t("intro")} />
-      <Section tone="surface">
+      <PageHeader kicker={t("eyebrow")} title={t("title")} intro={t("intro")} />
+      <Section tone="muted">
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {expertises
             .slice()

@@ -2,6 +2,7 @@ import { getLocale } from "next-intl/server";
 
 import { Link } from "@/i18n/navigation";
 import { Icon } from "@/components/ui/Icon";
+import { MediaSlot } from "@/components/ui/MediaSlot";
 import type { Expertise } from "@/content/types";
 import { t } from "@/content/types";
 import { cn } from "@/lib/cn";
@@ -18,24 +19,26 @@ export async function ExpertiseCard({
     <Link
       href={`/expertises/${expertise.slug}`}
       className={cn(
-        "group flex flex-col gap-4 border border-border bg-background p-6 transition-colors hover:border-ocean-400 hover:bg-steel-50",
+        "group relative block overflow-hidden rounded-[var(--radius-card)]",
         className,
       )}
     >
-      <span className="inline-flex h-12 w-12 items-center justify-center rounded-sm bg-navy-900 text-ocean-300">
-        <Icon name={expertise.icon} className="h-6 w-6" />
+      <MediaSlot
+        bare
+        overlay
+        className="aspect-[4/3] transition-transform duration-500 group-hover:scale-[1.04]"
+      />
+      <span className="absolute left-4 top-4 inline-flex h-9 w-9 items-center justify-center rounded-md bg-white/15 text-white backdrop-blur-sm">
+        <Icon name={expertise.icon} className="h-[1.15rem] w-[1.15rem]" />
       </span>
-      <h3 className="text-lg text-navy-900">{t(expertise.title, locale)}</h3>
-      <p className="text-sm leading-relaxed text-steel-600">
-        {t(expertise.summary, locale)}
-      </p>
-      <span className="mt-auto inline-flex items-center gap-1 text-sm font-semibold uppercase tracking-wide text-ocean-600">
-        {locale === "en" ? "Learn more" : "En savoir plus"}
-        <Icon
-          name="ArrowRight"
-          className="h-4 w-4 transition-transform group-hover:translate-x-1"
-        />
-      </span>
+      <div className="absolute inset-x-4 bottom-4 flex items-end justify-between gap-3">
+        <h3 className="font-display text-[0.95rem] font-semibold leading-tight text-white">
+          {t(expertise.title, locale)}
+        </h3>
+        <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-600 text-white transition-colors group-hover:bg-white group-hover:text-brand-700">
+          <Icon name="ArrowRight" className="h-4 w-4" />
+        </span>
+      </div>
     </Link>
   );
 }

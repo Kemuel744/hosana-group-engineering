@@ -3,27 +3,31 @@ import type { ComponentProps, ReactNode } from "react";
 import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/cn";
 
-type Variant = "primary" | "secondary" | "ghost" | "onDark";
+type Variant = "primary" | "accent" | "outline" | "onDark";
 type Size = "sm" | "md" | "lg";
 
 const base =
-  "inline-flex items-center justify-center gap-2 rounded-sm font-semibold uppercase tracking-wide transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 disabled:pointer-events-none disabled:opacity-60";
+  "inline-flex items-center justify-center gap-2 rounded-[var(--radius-btn)] font-display font-semibold leading-none transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 disabled:pointer-events-none disabled:opacity-60";
 
 const variants: Record<Variant, string> = {
+  // Bouton principal du template : bleu marine plein
   primary:
-    "bg-gold-500 text-navy-950 hover:bg-gold-400 focus-visible:outline-gold-500",
-  secondary:
     "bg-navy-800 text-white hover:bg-navy-700 focus-visible:outline-navy-800",
-  ghost:
+  // Accent bleu vif (« Découvrir nos expertises »)
+  accent:
+    "bg-brand-600 text-white hover:bg-brand-700 focus-visible:outline-brand-600",
+  // Contour sur fond clair
+  outline:
     "border border-navy-200 bg-transparent text-navy-800 hover:bg-navy-50 focus-visible:outline-navy-800",
+  // Contour sur fond sombre / photo
   onDark:
-    "border border-white/30 bg-white/5 text-white hover:bg-white/15 focus-visible:outline-white",
+    "border border-white/60 bg-transparent text-white hover:bg-white/15 focus-visible:outline-white",
 };
 
 const sizes: Record<Size, string> = {
-  sm: "px-3.5 py-2 text-xs",
+  sm: "px-4 py-2 text-[0.8125rem]",
   md: "px-5 py-2.5 text-sm",
-  lg: "px-6 py-3 text-sm sm:text-base",
+  lg: "px-6 py-3.5 text-sm sm:text-[0.95rem]",
 };
 
 export function buttonClasses(
@@ -41,7 +45,6 @@ type CommonProps = {
   children: ReactNode;
 };
 
-/** Lien interne conscient de la locale (next-intl). */
 export function ButtonLink({
   href,
   variant,
@@ -51,17 +54,12 @@ export function ButtonLink({
   ...rest
 }: CommonProps & ComponentProps<typeof Link>) {
   return (
-    <Link
-      href={href}
-      className={buttonClasses(variant, size, className)}
-      {...rest}
-    >
+    <Link href={href} className={buttonClasses(variant, size, className)} {...rest}>
       {children}
     </Link>
   );
 }
 
-/** Lien externe (tel:, mailto:, https://). */
 export function ButtonExternal({
   href,
   variant,

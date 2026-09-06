@@ -64,7 +64,7 @@ export default async function ExpertiseDetailPage({
         <div className="grid gap-12 lg:grid-cols-3">
           <div className="lg:col-span-2">
             <SectionHeading as="h2" title={t("detailIntro")} />
-            <p className="mt-4 text-lg leading-relaxed text-steel-700">
+            <p className="mt-4 text-lg leading-relaxed text-ink-700">
               {tr(expertise.description, loc)}
             </p>
 
@@ -73,9 +73,9 @@ export default async function ExpertiseDetailPage({
               {expertise.services.map((s, i) => (
                 <li
                   key={i}
-                  className="flex items-start gap-2.5 border border-border bg-steel-50 p-4 text-sm text-steel-700"
+                  className="flex items-start gap-2.5 border border-border bg-ink-50 p-4 text-sm text-ink-700"
                 >
-                  <Icon name="ChevronRight" className="mt-0.5 h-4 w-4 shrink-0 text-ocean-500" />
+                  <Icon name="ChevronRight" className="mt-0.5 h-4 w-4 shrink-0 text-brand-500" />
                   {tr(s, loc)}
                 </li>
               ))}
@@ -87,25 +87,25 @@ export default async function ExpertiseDetailPage({
               <h3 className="text-sm font-semibold uppercase tracking-widest text-navy-900">
                 {common("means")}
               </h3>
-              <ul className="mt-4 space-y-2.5 text-sm text-steel-600">
+              <ul className="mt-4 space-y-2.5 text-sm text-ink-600">
                 {expertise.means.map((m, i) => (
                   <li key={i} className="flex items-start gap-2">
-                    <Icon name="Check" className="mt-0.5 h-4 w-4 shrink-0 text-gold-500" />
+                    <Icon name="Check" className="mt-0.5 h-4 w-4 shrink-0 text-brand-500" />
                     {tr(m, loc)}
                   </li>
                 ))}
               </ul>
               <Link
                 href="/equipements"
-                className="mt-5 inline-flex items-center gap-1 text-sm font-semibold uppercase tracking-wide text-ocean-600"
+                className="mt-5 inline-flex items-center gap-1 text-sm font-semibold uppercase tracking-wide text-brand-600"
               >
                 {nav("equipment")}
                 <Icon name="ArrowRight" className="h-4 w-4" />
               </Link>
             </div>
 
-            <div className="mt-5 bg-maritime p-6 text-white">
-              <p className="text-sm text-steel-200">{t("relatedCta")}</p>
+            <div className="mt-5 bg-brandwash p-6 text-white">
+              <p className="text-sm text-ink-200">{t("relatedCta")}</p>
               <Link
                 href="/devis"
                 className={buttonClasses("primary", "md") + " mt-4 w-full"}

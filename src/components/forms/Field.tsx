@@ -3,7 +3,7 @@ import type { ComponentProps, ReactNode } from "react";
 import { cn } from "@/lib/cn";
 
 const controlClass =
-  "mt-1.5 w-full rounded-sm border border-steel-300 bg-white px-3.5 py-2.5 text-sm text-navy-900 outline-none transition-colors placeholder:text-steel-400 focus:border-ocean-500 focus:ring-2 focus:ring-ocean-500/30";
+  "mt-1.5 w-full rounded-sm border border-ink-300 bg-white px-3.5 py-2.5 text-sm text-navy-900 outline-none transition-colors placeholder:text-ink-400 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/30";
 
 export function Label({
   htmlFor,
@@ -20,7 +20,7 @@ export function Label({
       className="text-sm font-medium text-navy-900"
     >
       {children}
-      {required ? <span className="ml-0.5 text-gold-600">*</span> : null}
+      {required ? <span className="ml-0.5 text-brand-600">*</span> : null}
     </label>
   );
 }

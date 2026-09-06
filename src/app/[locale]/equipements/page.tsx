@@ -28,14 +28,16 @@ export default async function EquipmentPage({
 
   return (
     <>
-      <PageHeader kicker={t("kicker")} title={t("title")} intro={t("intro")} />
-      <Section tone="surface">
+      <PageHeader kicker={t("eyebrow")} title={t("title")} intro={t("intro")} />
+      <Section tone="muted">
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {equipements.map((item) => (
-            <EquipmentCard key={item.slug} item={item} />
+            <div key={item.slug} id={item.slug} className="scroll-mt-32">
+              <EquipmentCard item={item} />
+            </div>
           ))}
         </div>
-        <p className="mt-8 border-l-2 border-gold-500 pl-4 text-sm text-steel-500">
+        <p className="mt-8 border-l-2 border-brand-500 pl-4 text-sm text-ink-500">
           {t("specsNote")}
         </p>
       </Section>

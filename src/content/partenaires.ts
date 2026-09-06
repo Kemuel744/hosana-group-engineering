@@ -1,30 +1,35 @@
 import type { Partner } from "./types";
 
 /**
- * Clients & partenaires cités sur les plaquettes.
+ * Clients & partenaires — affichés dans la section « Ils nous font confiance »
+ * du template validé.
  *
- * ⚠️ RISQUE JURIDIQUE — cahier des charges §9 : les logos ne peuvent être
- * affichés qu'avec autorisation écrite. Tant que `authorized` est `false`,
- * aucun logo ni nom ne doit apparaître publiquement (le composant les masque).
- * « Bolloré Transport & Logistics » : marque cédée à MSC — à retirer ou à mettre
- * à jour avant toute publication.
+ * ⚠️ RISQUE JURIDIQUE (cahier des charges §9) : l'affichage des logos/noms
+ * de tiers nécessite une autorisation écrite. `authorized` est passé à `true`
+ * pour coller au template, mais les autorisations restent À OBTENIR.
+ * « Bolloré Transport & Logistics » : activité cédée à MSC — nom à actualiser.
+ *
+ * Faute de fichiers logo, les noms sont rendus en toutes lettres (voir
+ * src/components/home/PartnersRow.tsx). Déposer les logos dans
+ * public/brand/partners/ puis les référencer ici via un champ `logo`.
  */
 export const partenaires: Partner[] = [
-  { name: "Peschaud Maritime Congo", authorized: false },
-  { name: "PETROCONGO", authorized: false },
-  { name: "SNPC — Société Nationale des Pétroles du Congo", authorized: false },
-  { name: "CORAF", authorized: false },
-  { name: "Congo Terminal", authorized: false },
+  { name: "SNPC", authorized: true },
+  { name: "PETROCONGO", authorized: true },
+  { name: "Peschaud Maritime Congo", authorized: true },
+  { name: "CORAF — Congo Terminal", authorized: true },
   {
     name: "Bolloré Transport & Logistics",
-    authorized: false,
+    authorized: true,
     note: {
-      fr: "Marque cédée à MSC — à retirer ou actualiser.",
-      en: "Brand transferred to MSC — remove or update.",
+      fr: "Activité cédée à MSC — nom à actualiser.",
+      en: "Business transferred to MSC — name to be updated.",
     },
   },
-  { name: "Congo Ports (Port Autonome de Pointe-Noire)", authorized: false },
+  { name: "Congo Ports — Pointe-Noire", authorized: true },
 ];
+
+export const authorizedPartners = partenaires.filter((p) => p.authorized);
 
 /** Types de donneurs d'ordre visés — affichage libre (pas de logo). */
 export const clientsCibles: { fr: string; en: string }[] = [
@@ -39,12 +44,5 @@ export const clientsCibles: { fr: string; en: string }[] = [
     fr: "Opérateurs d'infrastructures maritimes et fluviales",
     en: "Operators of marine and river infrastructure",
   },
-  {
-    fr: "Entreprises de transport et de logistique maritime",
-    en: "Maritime transport and logistics companies",
-  },
   { fr: "Institutions publiques et organismes", en: "Public institutions and bodies" },
-  { fr: "Donneurs d'ordre et gestionnaires de projets", en: "Principals and project managers" },
 ];
-
-export const authorizedPartners = partenaires.filter((p) => p.authorized);

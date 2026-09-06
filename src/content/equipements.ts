@@ -1,7 +1,7 @@
 import type { EquipmentItem } from "./types";
 
 /**
- * Catalogue des équipements — source : cahier des charges §5 + plaquettes.
+ * Catalogue des moyens — source : cahier des charges §5 + plaquettes + template.
  * ⚠️ Les valeurs chiffrées (capacité, puissance, profondeur…) ne figurent pas
  * sur les supports fournis. Elles sont marquées « à confirmer » : à renseigner
  * par le client avant mise en ligne — aucun chiffre ne doit être inventé.
@@ -12,11 +12,16 @@ const TBC = { fr: "à confirmer", en: "to be confirmed" };
 export const equipements: EquipmentItem[] = [
   {
     slug: "drague-aspiratrice",
+    icon: "Ship",
     category: { fr: "Dragage", en: "Dredging" },
-    name: { fr: "Drague aspiratrice", en: "Suction dredger" },
+    name: { fr: "Dragues aspiratrices", en: "Suction dredgers" },
+    tagline: {
+      fr: "Capacité de pompage élevée pour tous types de sédiments.",
+      en: "High pumping capacity for all types of sediment.",
+    },
     description: {
-      fr: "Unité de dragage par aspiration pour l'extraction et le refoulement des sédiments en milieu portuaire et fluvial.",
-      en: "Suction dredging unit for extraction and pipeline discharge of sediments in port and river environments.",
+      fr: "Unités de dragage par aspiration pour l'extraction et le refoulement des sédiments en milieu portuaire et fluvial.",
+      en: "Suction dredging units for extraction and pipeline discharge of sediments in port and river environments.",
     },
     specs: [
       { label: { fr: "Capacité de pompage", en: "Pumping capacity" }, value: TBC },
@@ -32,11 +37,16 @@ export const equipements: EquipmentItem[] = [
   },
   {
     slug: "pompe-de-dragage",
+    icon: "Wrench",
     category: { fr: "Dragage", en: "Dredging" },
-    name: { fr: "Pompe de dragage", en: "Dredge pump" },
+    name: { fr: "Pompes de dragage", en: "Dredge pumps" },
+    tagline: {
+      fr: "Puissance et fiabilité pour vos projets.",
+      en: "Power and reliability for your projects.",
+    },
     description: {
-      fr: "Pompe centrifuge à sédiments (type Toyo ou équivalent) pour l'aspiration et le transfert de matériaux chargés.",
-      en: "Centrifugal slurry pump (Toyo type or equivalent) for suction and transfer of loaded materials.",
+      fr: "Pompes centrifuges à sédiments (type Toyo ou équivalent) pour l'aspiration et le transfert de matériaux chargés.",
+      en: "Centrifugal slurry pumps (Toyo type or equivalent) for suction and transfer of loaded materials.",
     },
     specs: [
       { label: { fr: "Débit", en: "Flow rate" }, value: TBC },
@@ -49,64 +59,38 @@ export const equipements: EquipmentItem[] = [
     ],
   },
   {
-    slug: "barge",
+    slug: "barges-plateformes",
+    icon: "Sailboat",
     category: { fr: "Moyens flottants", en: "Floating means" },
-    name: { fr: "Barge", en: "Barge" },
+    name: { fr: "Barges et plateformes", en: "Barges and platforms" },
+    tagline: {
+      fr: "Solutions de transport et de travaux maritimes.",
+      en: "Transport and marine works solutions.",
+    },
     description: {
-      fr: "Barge de transport et de travail pour l'acheminement de matériel, de sédiments et le support des opérations maritimes.",
-      en: "Transport and work barge for moving equipment and sediments and supporting marine operations.",
+      fr: "Barges de transport et de travail et plateformes modulaires équipées de treuils, pour l'acheminement de matériel et le support des opérations maritimes.",
+      en: "Transport and work barges and modular winch-equipped platforms, for moving equipment and supporting marine operations.",
     },
     specs: [
       { label: { fr: "Longueur × largeur", en: "Length × beam" }, value: TBC },
       { label: { fr: "Charge utile", en: "Payload" }, value: TBC },
       { label: { fr: "Tirant d'eau", en: "Draught" }, value: TBC },
+      { label: { fr: "Nombre de treuils", en: "Number of winches" }, value: TBC },
     ],
     applications: [
       { fr: "Transport de matériel et de sédiments", en: "Transport of equipment and sediments" },
-      { fr: "Plateforme d'appui aux travaux", en: "Support platform for works" },
-    ],
-  },
-  {
-    slug: "plateforme-flottante",
-    category: { fr: "Moyens flottants", en: "Floating means" },
-    name: { fr: "Plateforme flottante", en: "Floating platform" },
-    description: {
-      fr: "Plateforme de travail modulaire équipée de treuils pour les interventions de dragage, de battage ou de manutention sur l'eau.",
-      en: "Modular work platform fitted with winches for dredging, piling or handling operations on water.",
-    },
-    specs: [
-      { label: { fr: "Dimensions", en: "Dimensions" }, value: TBC },
-      { label: { fr: "Nombre de treuils", en: "Number of winches" }, value: TBC },
-      { label: { fr: "Capacité de travail", en: "Working capacity" }, value: TBC },
-    ],
-    applications: [
-      { fr: "Support de dragage", en: "Dredging support" },
-      { fr: "Travaux de quais", en: "Berth works" },
-      { fr: "Manutention sur l'eau", en: "On-water handling" },
-    ],
-  },
-  {
-    slug: "pelle-longue-portee",
-    category: { fr: "Engins de chantier", en: "Site machinery" },
-    name: { fr: "Pelle longue portée", en: "Long-reach excavator" },
-    description: {
-      fr: "Pelle hydraulique à bras long pour le curage, le terrassement et les travaux sous-marins peu profonds.",
-      en: "Long-boom hydraulic excavator for dredging, earthworks and shallow underwater works.",
-    },
-    specs: [
-      { label: { fr: "Portée", en: "Reach" }, value: TBC },
-      { label: { fr: "Profondeur de travail", en: "Working depth" }, value: TBC },
-      { label: { fr: "Marteau hydraulique", en: "Hydraulic hammer" }, value: TBC },
-    ],
-    applications: [
-      { fr: "Curage et terrassement", en: "Dredging and earthworks" },
-      { fr: "Travaux sous-marins peu profonds", en: "Shallow underwater works" },
+      { fr: "Support de dragage et travaux de quais", en: "Dredging support and berth works" },
     ],
   },
   {
     slug: "equipements-de-plongee",
+    icon: "LifeBuoy",
     category: { fr: "Plongée", en: "Diving" },
-    name: { fr: "Équipements de plongée professionnelle", en: "Professional diving equipment" },
+    name: { fr: "Équipements de plongée", en: "Diving equipment" },
+    tagline: {
+      fr: "Interventions sous-marines en toute sécurité.",
+      en: "Safe underwater operations.",
+    },
     description: {
       fr: "Ensemble d'équipements de plongée professionnelle pour l'inspection, la maintenance et les travaux subaquatiques.",
       en: "Professional diving equipment set for inspection, maintenance and subaquatic works.",
@@ -122,9 +106,37 @@ export const equipements: EquipmentItem[] = [
     ],
   },
   {
+    slug: "pelle-longue-portee",
+    icon: "Construction",
+    category: { fr: "Engins de chantier", en: "Site machinery" },
+    name: { fr: "Pelles longue portée", en: "Long-reach excavators" },
+    tagline: {
+      fr: "Curage, terrassement et travaux sous-marins peu profonds.",
+      en: "Dredging, earthworks and shallow underwater works.",
+    },
+    description: {
+      fr: "Pelles hydrauliques à bras long pour le curage, le terrassement et les travaux sous-marins peu profonds.",
+      en: "Long-boom hydraulic excavators for dredging, earthworks and shallow underwater works.",
+    },
+    specs: [
+      { label: { fr: "Portée", en: "Reach" }, value: TBC },
+      { label: { fr: "Profondeur de travail", en: "Working depth" }, value: TBC },
+      { label: { fr: "Marteau hydraulique", en: "Hydraulic hammer" }, value: TBC },
+    ],
+    applications: [
+      { fr: "Curage et terrassement", en: "Dredging and earthworks" },
+      { fr: "Travaux sous-marins peu profonds", en: "Shallow underwater works" },
+    ],
+  },
+  {
     slug: "materiel-de-levage",
+    icon: "Anchor",
     category: { fr: "Levage & chantier", en: "Lifting & site" },
     name: { fr: "Matériel de levage & de chantier", en: "Lifting & site equipment" },
+    tagline: {
+      fr: "Manutention pour la construction métallique et les opérations portuaires.",
+      en: "Handling for steelwork and port operations.",
+    },
     description: {
       fr: "Moyens de levage et de manutention pour la construction métallique, l'assemblage de barges et les opérations portuaires.",
       en: "Lifting and handling means for steelwork, barge assembly and port operations.",
@@ -143,3 +155,11 @@ export const equipements: EquipmentItem[] = [
 export function getEquipment(slug: string) {
   return equipements.find((e) => e.slug === slug);
 }
+
+/** Les 4 moyens mis en avant sur l'accueil (template validé). */
+export const homeEquipment = [
+  "drague-aspiratrice",
+  "pompe-de-dragage",
+  "barges-plateformes",
+  "equipements-de-plongee",
+].map((slug) => equipements.find((e) => e.slug === slug)!);

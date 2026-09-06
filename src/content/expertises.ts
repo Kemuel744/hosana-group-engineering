@@ -148,7 +148,7 @@ export const expertises: Expertise[] = [
   },
   {
     slug: "ntic-cybersecurite",
-    icon: "ShieldCheck",
+    icon: "Cpu",
     order: 6,
     featured: true,
     title: { fr: "NTIC & cybersécurité", en: "IT & cybersecurity" },
@@ -174,7 +174,7 @@ export const expertises: Expertise[] = [
     slug: "energie-solaire",
     icon: "SunMedium",
     order: 7,
-    featured: false,
+    featured: true,
     title: { fr: "Énergie solaire", en: "Solar energy" },
     summary: {
       fr: "Études de dimensionnement, installation de panneaux photovoltaïques et maintenance des installations.",
@@ -195,7 +195,7 @@ export const expertises: Expertise[] = [
     slug: "maintenance-mecanique-industrielle",
     icon: "Wrench",
     order: 8,
-    featured: false,
+    featured: true,
     title: {
       fr: "Maintenance mécanique & industrielle",
       en: "Mechanical & industrial maintenance",
@@ -223,7 +223,7 @@ export const expertises: Expertise[] = [
     slug: "transport-logistique-maritime",
     icon: "Truck",
     order: 9,
-    featured: false,
+    featured: true,
     title: {
       fr: "Transport & logistique maritime",
       en: "Maritime transport & logistics",
@@ -279,7 +279,7 @@ export const expertises: Expertise[] = [
     slug: "mise-a-disposition-personnel",
     icon: "Users",
     order: 11,
-    featured: false,
+    featured: true,
     title: {
       fr: "Mise à disposition de personnel & d'expertise",
       en: "Technical staff & expertise supply",
@@ -332,7 +332,7 @@ export const expertises: Expertise[] = [
     slug: "bathymetrie-hydrographie",
     icon: "Radar",
     order: 13,
-    featured: true,
+    featured: false,
     title: { fr: "Bathymétrie & hydrographie", en: "Bathymetry & hydrography" },
     summary: {
       fr: "Levés bathymétriques, cartographie des fonds, calcul des volumes de sédiments et production de rapports techniques.",
@@ -388,4 +388,22 @@ export function getExpertise(slug: string) {
   return expertises.find((e) => e.slug === slug);
 }
 
-export const featuredExpertises = expertises.filter((e) => e.featured);
+/** Ordre d'affichage des 10 domaines de la grille d'accueil (template validé). */
+const HOME_ORDER = [
+  "ingenierie-maritime-construction-navale",
+  "dragage-maritime-fluvial",
+  "travaux-sous-marins-plongee",
+  "services-offshore",
+  "batiment-travaux-publics",
+  "energie-solaire",
+  "ntic-cybersecurite",
+  "maintenance-mecanique-industrielle",
+  "transport-logistique-maritime",
+  "mise-a-disposition-personnel",
+];
+
+export const featuredExpertises = HOME_ORDER.map(
+  (slug) => expertises.find((e) => e.slug === slug)!,
+);
+
+export const allExpertises = [...expertises].sort((a, b) => a.order - b.order);

@@ -10,10 +10,10 @@ export default async function NotFound() {
   return (
     <Container className="flex min-h-[60vh] flex-col items-center justify-center py-24 text-center">
       <p className="font-display text-6xl text-navy-900">404</p>
-      <p className="mt-4 max-w-md text-steel-600">
+      <p className="mt-4 max-w-md text-ink-600">
         Cette page est introuvable. / This page could not be found.
       </p>
-      <Link href="/" className={buttonClasses("secondary", "md") + " mt-8"}>
+      <Link href="/" className={buttonClasses("primary", "md") + " mt-8"}>
         {nav("home")}
       </Link>
     </Container>

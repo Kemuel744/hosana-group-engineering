@@ -5,28 +5,29 @@ import {
   getTranslations,
   setRequestLocale,
 } from "next-intl/server";
-import { Barlow, Barlow_Condensed } from "next/font/google";
+import { Inter, Poppins } from "next/font/google";
 import { notFound } from "next/navigation";
 
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
+import { TopBar } from "@/components/layout/TopBar";
 import { WhatsAppFloat } from "@/components/layout/WhatsAppFloat";
 import { routing } from "@/i18n/routing";
 import { site } from "@/lib/site";
 
 import "../globals.css";
 
-const barlow = Barlow({
+const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-  variable: "--font-barlow",
+  variable: "--font-inter",
   display: "swap",
 });
 
-const barlowCondensed = Barlow_Condensed({
+const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["600", "700"],
-  variable: "--font-barlow-condensed",
+  weight: ["500", "600", "700", "800"],
+  variable: "--font-poppins",
   display: "swap",
 });
 
@@ -83,18 +84,16 @@ export default async function LocaleLayout({
   const t = await getTranslations({ locale, namespace: "common" });
 
   return (
-    <html
-      lang={locale}
-      className={`${barlow.variable} ${barlowCondensed.variable}`}
-    >
+    <html lang={locale} className={`${inter.variable} ${poppins.variable}`}>
       <body className="flex min-h-dvh flex-col bg-background text-foreground antialiased">
         <NextIntlClientProvider locale={locale} messages={messages}>
           <a
             href="#contenu"
-            className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-sm focus:bg-navy-900 focus:px-4 focus:py-2 focus:text-white"
+            className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-md focus:bg-navy-900 focus:px-4 focus:py-2 focus:text-white"
           >
             {t("skipToContent")}
           </a>
+          <TopBar />
           <Header />
           <main id="contenu" className="flex-1">
             {children}

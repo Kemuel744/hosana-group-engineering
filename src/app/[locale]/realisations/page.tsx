@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
-import { ComingSoon } from "@/components/blocks/ComingSoon";
 import { CtaBanner } from "@/components/blocks/CtaBanner";
 import { PageHeader } from "@/components/blocks/PageHeader";
+import { RealisationCard } from "@/components/cards/RealisationCard";
 import { Section } from "@/components/ui/Section";
+import { realisations } from "@/content/realisations";
 
 export async function generateMetadata({
   params,
@@ -24,12 +25,20 @@ export default async function ProjectsPage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("projects");
+  const common = await getTranslations("common");
 
   return (
     <>
-      <PageHeader kicker={t("kicker")} title={t("title")} intro={t("intro")} />
-      <Section>
-        <ComingSoon message={t("empty")} />
+      <PageHeader kicker={t("eyebrow")} title={t("title")} intro={t("intro")} />
+      <Section tone="muted">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {realisations.map((item) => (
+            <RealisationCard key={item.slug} item={item} />
+          ))}
+        </div>
+        <p className="mt-8 border-l-2 border-brand-500 pl-4 text-sm text-ink-500">
+          {t("empty")} — {common("toBeValidated")}
+        </p>
       </Section>
       <CtaBanner />
     </>

@@ -2,78 +2,71 @@
 
 /* ------------------------------------------------------------------ *
  * HOSANA GROUP ENGINEERING — Design system
- * Style : « Premium Industrial & Maritime »
- * Bleu marine (principal) · bleu océan (secondaire) · doré (premium)
+ * Aligné sur le template validé : corporate maritime, bleu & blanc,
+ * coins arrondis, typo géométrique (Poppins) + texte (Inter).
  * ------------------------------------------------------------------ */
 
 @theme {
-  /* Bleu marine — couleur principale */
-  --color-navy-50: #eef3fb;
-  --color-navy-100: #d6e2f4;
-  --color-navy-200: #adc4e8;
-  --color-navy-300: #7c9fd6;
-  --color-navy-400: #4a72b8;
-  --color-navy-500: #2857a0;
-  --color-navy-600: #1c437f;
-  --color-navy-700: #163665;
-  --color-navy-800: #0f2749;
-  --color-navy-900: #0a1c37;
-  --color-navy-950: #050f20;
+  /* Bleu marine — barres, pied de page, boutons pleins */
+  --color-navy-50: #eef1f8;
+  --color-navy-100: #d6dcee;
+  --color-navy-200: #aab6d8;
+  --color-navy-300: #7787bd;
+  --color-navy-400: #4a5c9c;
+  --color-navy-500: #2f4180;
+  --color-navy-600: #223466;
+  --color-navy-700: #1a294f;
+  --color-navy-800: #142140;
+  --color-navy-900: #0f1a33;
+  --color-navy-950: #0a1226;
 
-  /* Bleu océan — couleur secondaire */
-  --color-ocean-50: #eaf6fd;
-  --color-ocean-100: #cdeafa;
-  --color-ocean-200: #9fd7f4;
-  --color-ocean-300: #63bced;
-  --color-ocean-400: #33a0de;
-  --color-ocean-500: #1a83c4;
-  --color-ocean-600: #1568a2;
-  --color-ocean-700: #155483;
-  --color-ocean-800: #17466c;
-  --color-ocean-900: #163b5b;
+  /* Bleu vif — accents : liens, filets, boutons ronds, survols */
+  --color-brand-50: #eef4ff;
+  --color-brand-100: #d9e6ff;
+  --color-brand-200: #bcd3ff;
+  --color-brand-300: #8eb5ff;
+  --color-brand-400: #598cff;
+  --color-brand-500: #2f66f0;
+  --color-brand-600: #1d4ed8;
+  --color-brand-700: #1a3fb0;
+  --color-brand-800: #1b378d;
+  --color-brand-900: #1c3372;
 
-  /* Doré — accent premium, à utiliser avec parcimonie */
-  --color-gold-50: #fbf6ea;
-  --color-gold-100: #f4e7c6;
-  --color-gold-200: #e9cf8f;
-  --color-gold-300: #ddb75c;
-  --color-gold-400: #d0a13a;
-  --color-gold-500: #c9a24b;
-  --color-gold-600: #a67c2e;
-  --color-gold-700: #825f26;
-
-  /* Neutres — blanc & gris métallique */
-  --color-steel-50: #f5f7fa;
-  --color-steel-100: #eaeef3;
-  --color-steel-200: #d7dee8;
-  --color-steel-300: #b7c2d1;
-  --color-steel-400: #8b99ac;
-  --color-steel-500: #64748b;
-  --color-steel-600: #4a586b;
-  --color-steel-700: #384456;
-  --color-steel-800: #263140;
-  --color-steel-900: #18212e;
+  /* Neutres */
+  --color-ink-50: #f6f8fb;
+  --color-ink-100: #eef1f6;
+  --color-ink-200: #e0e5ee;
+  --color-ink-300: #c7cfdd;
+  --color-ink-400: #9aa5b8;
+  --color-ink-500: #6b7688;
+  --color-ink-600: #4c5667;
+  --color-ink-700: #363e4c;
+  --color-ink-800: #232a36;
+  --color-ink-900: #151a22;
 
   /* Rôles sémantiques */
   --color-background: #ffffff;
-  --color-surface: var(--color-steel-50);
-  --color-surface-strong: var(--color-navy-900);
-  --color-foreground: var(--color-navy-950);
-  --color-muted: var(--color-steel-500);
-  --color-border: var(--color-steel-200);
-  --color-primary: var(--color-navy-800);
-  --color-accent: var(--color-ocean-500);
+  --color-surface: #f5f7fb;
+  --color-foreground: #151a22;
+  --color-muted: #6b7688;
+  --color-border: #e0e5ee;
+  --color-primary: #142140;
+  --color-accent: #1d4ed8;
 
   /* Typographie */
-  --font-sans: var(--font-barlow), ui-sans-serif, system-ui, -apple-system,
-    "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  --font-display: var(--font-barlow-condensed), var(--font-barlow), ui-sans-serif,
-    system-ui, sans-serif;
+  --font-sans:
+    var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif;
+  --font-display:
+    var(--font-poppins), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  /* Rayons */
+  --radius-btn: 0.5rem;
+  --radius-card: 0.75rem;
 
   /* Container */
-  --spacing-gutter: 1.5rem;
+  --spacing-gutter: 1.25rem;
 
-  /* Rythme d'animation */
   --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -89,7 +82,7 @@
   html {
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
-    scroll-padding-top: 6rem;
+    scroll-padding-top: 7.5rem;
   }
 
   body {
@@ -104,32 +97,30 @@
   h1,
   h2,
   h3,
-  h4 {
+  h4,
+  h5 {
     font-family: var(--font-display);
     font-weight: 700;
-    line-height: 1.05;
-    letter-spacing: 0.01em;
-    text-transform: uppercase;
+    line-height: 1.12;
+    letter-spacing: -0.01em;
   }
 
   ::selection {
-    background-color: var(--color-ocean-500);
+    background-color: var(--color-brand-600);
     color: #fff;
   }
 
   :focus-visible {
-    outline: 2px solid var(--color-ocean-500);
+    outline: 2px solid var(--color-brand-600);
     outline-offset: 2px;
-    border-radius: 2px;
+    border-radius: 3px;
   }
 
-  /* Respect des préférences de mouvement réduit */
   @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
     *::after {
       animation-duration: 0.001ms !important;
-      animation-iteration-count: 1 !important;
       transition-duration: 0.001ms !important;
       scroll-behavior: auto !important;
     }
@@ -137,68 +128,74 @@
 }
 
 @layer components {
-  /* Conteneur centré standard */
   .container-hge {
     width: 100%;
     margin-inline: auto;
-    max-width: 80rem;
+    max-width: 78rem;
     padding-inline: var(--spacing-gutter);
   }
 
-  /* Filet doré discret sous les titres de section */
-  .rule-gold::after {
-    content: "";
-    display: block;
-    width: 3.5rem;
-    height: 3px;
-    margin-top: 1rem;
-    background: linear-gradient(
-      90deg,
-      var(--color-gold-500),
-      var(--color-gold-300)
-    );
+  @media (min-width: 640px) {
+    .container-hge {
+      padding-inline: 2rem;
+    }
   }
 
-  /* Dégradé maritime réutilisable (héros, blocs forts) */
-  .bg-maritime {
-    background-color: var(--color-navy-900);
+  /* Sur-titre de section : court filet bleu + libellé capitales */
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 0.8125rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-brand-600);
+  }
+  .eyebrow::before {
+    content: "";
+    width: 1.75rem;
+    height: 2px;
+    background: currentColor;
+  }
+  .eyebrow.on-dark {
+    color: var(--color-brand-300);
+  }
+
+  /* Fond « moyens opérationnels » */
+  .bg-brandwash {
+    background-color: var(--color-brand-900);
     background-image:
       radial-gradient(
-        60rem 40rem at 15% -10%,
-        rgba(51, 160, 222, 0.35),
+        70rem 40rem at 12% -20%,
+        rgba(89, 140, 255, 0.35),
         transparent 60%
       ),
-      radial-gradient(
-        50rem 40rem at 100% 0%,
-        rgba(20, 84, 131, 0.55),
-        transparent 55%
-      ),
-      linear-gradient(180deg, var(--color-navy-900), var(--color-navy-950));
+      linear-gradient(180deg, var(--color-brand-800), var(--color-navy-900));
   }
 
-  /* Motif de vagues très léger pour les fonds clairs */
-  .bg-waves {
-    background-color: var(--color-surface);
+  /* Emplacement image générique (dégradé + trame) */
+  .media-slot {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--color-navy-800);
+    background-image:
+      radial-gradient(
+        40rem 20rem at 20% 0%,
+        rgba(89, 140, 255, 0.3),
+        transparent 60%
+      ),
+      linear-gradient(160deg, var(--color-navy-700), var(--color-navy-900));
+  }
+  .media-slot::after {
+    content: "";
+    position: absolute;
+    inset: 0;
     background-image: radial-gradient(
-      circle at 1px 1px,
-      var(--color-steel-200) 1px,
+      rgba(255, 255, 255, 0.06) 1px,
       transparent 0
     );
-    background-size: 28px 28px;
-  }
-}
-
-@layer utilities {
-  .reveal {
-    opacity: 0;
-    transform: translateY(18px);
-    animation: reveal 0.7s var(--ease-out-soft) forwards;
-  }
-
-  @keyframes reveal {
-    to {
-      opacity: 1;
-      transform: none;
-    }
+    background-size: 16px 16px;
   }
 }

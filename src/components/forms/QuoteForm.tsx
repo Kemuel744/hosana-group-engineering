@@ -102,7 +102,7 @@ export function QuoteForm() {
         aria-hidden
       />
 
-      <label className="flex items-start gap-2.5 text-sm text-steel-600">
+      <label className="flex items-start gap-2.5 text-sm text-ink-600">
         <input type="checkbox" name="consent" required className="mt-1" />
         {t("consent")}
       </label>
@@ -111,12 +111,12 @@ export function QuoteForm() {
         {t("submit")}
       </button>
 
-      <p className="text-xs text-steel-400">{t("backendNote")}</p>
+      <p className="text-xs text-ink-400">{t("backendNote")}</p>
 
       {sent ? (
         <p
           role="status"
-          className="rounded-sm border border-ocean-200 bg-ocean-50 px-4 py-3 text-sm text-ocean-800"
+          className="rounded-sm border border-brand-200 bg-brand-50 px-4 py-3 text-sm text-brand-800"
         >
           {common("formReceived")}
         </p>

@@ -35,11 +35,11 @@ export default async function QuotePage({
           <div className="max-w-2xl">
             <QuoteForm />
           </div>
-          <aside className="h-fit border border-border bg-steel-50 p-6">
-            <ul className="space-y-3 text-sm text-steel-700">
+          <aside className="h-fit border border-border bg-ink-50 p-6">
+            <ul className="space-y-3 text-sm text-ink-700">
               {atouts.slice(0, 5).map((a) => (
                 <li key={a.fr} className="flex items-start gap-2">
-                  <Icon name="Check" className="mt-0.5 h-4 w-4 shrink-0 text-ocean-500" />
+                  <Icon name="Check" className="mt-0.5 h-4 w-4 shrink-0 text-brand-500" />
                   {tr(a, locale)}
                 </li>
               ))}

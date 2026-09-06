@@ -52,16 +52,16 @@ export function ContactForm() {
         aria-hidden
       />
 
-      <button type="submit" className={buttonClasses("secondary", "lg")}>
+      <button type="submit" className={buttonClasses("primary", "lg")}>
         {t("send")}
       </button>
 
-      <p className="text-xs text-steel-400">{common("demoNote")}</p>
+      <p className="text-xs text-ink-400">{common("demoNote")}</p>
 
       {sent ? (
         <p
           role="status"
-          className="rounded-sm border border-ocean-200 bg-ocean-50 px-4 py-3 text-sm text-ocean-800"
+          className="rounded-sm border border-brand-200 bg-brand-50 px-4 py-3 text-sm text-brand-800"
         >
           {common("formReceived")}
         </p>

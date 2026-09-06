@@ -1,25 +1,35 @@
 {
   "nav": {
     "home": "Home",
+    "company": "Company",
     "about": "About",
+    "vision": "Our vision",
+    "mission": "Our mission",
+    "values": "Our values",
+    "team": "Our team",
     "expertises": "Expertise",
-    "equipment": "Equipment",
+    "allExpertises": "All our expertise",
+    "equipment": "Resources",
+    "allEquipment": "All our resources",
     "projects": "Projects",
-    "sectors": "Sectors",
-    "documentation": "Documentation",
     "news": "News",
     "contact": "Contact",
     "quote": "Request a quote",
     "menu": "Menu",
     "close": "Close",
-    "openMenu": "Open menu"
+    "openMenu": "Open menu",
+    "search": "Search",
+    "searchPlaceholder": "Search for an expertise, a resource, a project…",
+    "searchHint": "Type at least two characters.",
+    "searchEmpty": "No results."
   },
   "common": {
     "quoteCta": "Request a quote",
     "contactCta": "Contact us",
     "discoverExpertises": "Explore our expertise",
     "learnMore": "Learn more",
-    "allExpertises": "All our expertise",
+    "allExpertises": "See all our expertise",
+    "allProjects": "See all projects",
     "backToExpertises": "Back to expertise",
     "services": "Services",
     "means": "Equipment & resources deployed",
@@ -36,26 +46,25 @@
     "formReceived": "Thank you. Your details have been captured (demo — nothing is actually sent yet)."
   },
   "home": {
-    "heroKicker": "Maritime, industrial & infrastructure engineering",
-    "heroTitle": "Engineering for the sea, industry and infrastructure",
-    "heroText": "HOSANA GROUP ENGINEERING designs, builds and maintains maritime, industrial and technological structures and equipment, with a high standard of rigour, safety and quality.",
-    "statsTitle": "High-performance resources for lasting results",
-    "expertisesKicker": "Our trades, your solutions",
-    "expertisesTitle": "Integrated multisector expertise",
-    "expertisesText": "From study to delivery, through to inspection and maintenance of structures.",
-    "equipmentKicker": "Resources for your projects",
-    "equipmentTitle": "Our equipment",
-    "equipmentText": "Dredgers, pumps, barges, platforms, diving equipment and site machinery.",
-    "whyKicker": "Why work with us",
-    "whyTitle": "Converging trades, the strength of experience",
-    "sectorsKicker": "Sectors",
-    "sectorsTitle": "Solutions for every industry",
-    "valuesKicker": "Our commitments",
-    "valuesTitle": "What guides every assignment",
+    "heroKicker": "Engineering · Innovation · Sustainability",
+    "heroTitleLine1": "The expertise that",
+    "heroTitleLine2": "builds the future",
+    "heroText": "HOSANA GROUP ENGINEERING supports your maritime, industrial and technological projects with reliable, sustainable solutions tailored to your requirements.",
+    "heroImageCaption": "High-performance resources for lasting results",
+    "aboutEyebrow": "Who we are",
+    "aboutHeading": "Expertise serving the sea, industry and sustainable development",
+    "aboutCta": "Discover our company",
+    "expertisesTitle2": "Our fields of expertise",
+    "expertisesText2": "Complementary skills to address the most demanding projects.",
+    "equipmentTitle2": "Our operational resources",
+    "equipmentText2": "High-performance equipment for effective operations.",
+    "equipmentLink": "See all our equipment",
+    "projectsTitle": "Our projects",
+    "projectsText": "Concrete projects that demonstrate our expertise.",
     "partnersTitle": "Trusted by",
-    "partnersPlaceholder": "Client references will be shown once written authorisation to use their logos has been confirmed.",
-    "ctaTitle": "Have a project? Let's discuss your needs.",
-    "ctaText": "Describe your project and our teams will respond with a tailored technical proposal."
+    "partnersText": "Partners who share our vision.",
+    "ctaTitle": "Have a project to deliver?",
+    "ctaText": "Our teams are ready to support you on your maritime, industrial and technological projects."
   },
   "about": {
     "title": "About",
@@ -66,33 +75,34 @@
     "vision": "To be a benchmark player at the convergence of the maritime, technology and building trades, delivering sustainable, secure and high-value solutions.",
     "missionTitle": "Our mission",
     "mission": "To deliver superior-quality services, compliant with international standards, mobilising multisector expertise to ensure the success and safety of our clients' projects.",
+    "valuesTitle": "Our values",
     "teamTitle": "Our team, our strength",
     "teamText": "A multidisciplinary team of engineers, technicians and experts committed to taking on the most complex challenges.",
     "strengthsTitle": "Our strengths"
   },
   "expertises": {
     "title": "Our expertise",
-    "kicker": "Our trades, your solutions",
+    "eyebrow": "Our trades, your solutions",
     "intro": "Full command of the maritime, industrial, construction, technology and energy trades — to address every project effectively.",
     "detailIntro": "The need we address",
     "relatedCta": "Discuss this need"
   },
   "equipment": {
-    "title": "Our equipment",
-    "kicker": "Resources for your projects",
+    "title": "Our resources",
+    "eyebrow": "Resources for your projects",
     "intro": "Visitors should see not only the services offered, but also the resources available to carry them out. Detailed specifications will be provided by the company.",
     "specsNote": "Technical values to be confirmed by HOSANA GROUP ENGINEERING."
   },
   "sectors": {
     "title": "Sectors",
-    "kicker": "Solutions for every industry",
+    "eyebrow": "Solutions for every industry",
     "intro": "HOSANA GROUP ENGINEERING brings integrated technical solutions to the main sectors of the regional economy."
   },
   "projects": {
-    "title": "Projects",
-    "kicker": "Concrete proof of capability",
-    "intro": "Our portfolio is being compiled. Case studies — context, assignment, works carried out, equipment deployed and results — will be published once content and image rights have been validated by the client.",
-    "empty": "Case studies coming soon."
+    "title": "Our projects",
+    "eyebrow": "Concrete proof of capability",
+    "intro": "Concrete projects that demonstrate our expertise. Case studies — context, assignment, works carried out, equipment deployed and results — will be published once content and image rights have been validated by the client.",
+    "empty": "Detailed project sheets coming soon."
   },
   "documentation": {
     "title": "Documentation",
@@ -142,13 +152,20 @@
     "submit": "Send a quote request",
     "backendNote": "Form processing (submission, acknowledgement, anti-spam, tracking) to be connected to the back-office during the development phase."
   },
+  "legal": {
+    "legalTitle": "Legal notice",
+    "privacyTitle": "Privacy policy",
+    "sitemapTitle": "Site map",
+    "placeholder": "Content to be drafted with the client during the scoping phase (mandatory before go-live)."
+  },
   "footer": {
-    "tagline": "Engineering for the sea, industry and sustainable development.",
-    "nav": "Navigation",
+    "tagline": "Engineering at the service of your ambitions.",
+    "quickLinks": "Quick links",
     "expertises": "Expertise",
     "contact": "Contact",
     "legal": "Legal notice",
     "privacy": "Privacy policy",
+    "sitemap": "Site map",
     "rights": "All rights reserved.",
     "disclaimer": "Site under construction — content, figures and references pending client validation."
   }

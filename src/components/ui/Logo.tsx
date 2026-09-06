@@ -63,7 +63,7 @@ export function Logo({
           <span
             className={cn(
               "text-[0.62rem] font-semibold uppercase tracking-[0.22em]",
-              onLight ? "text-ocean-600" : "text-ocean-300",
+              onLight ? "text-brand-600" : "text-brand-300",
             )}
           >
             Group Engineering

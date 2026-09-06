@@ -1,62 +1,77 @@
 import type { ReactNode } from "react";
 
+import { Icon } from "./Icon";
+import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/cn";
 
 export function SectionHeading({
-  kicker,
+  eyebrow,
   title,
-  children,
+  subtitle,
+  link,
+  onDark = false,
   align = "left",
-  invert = false,
   as: Tag = "h2",
   className,
 }: {
-  kicker?: ReactNode;
+  eyebrow?: ReactNode;
   title: ReactNode;
-  children?: ReactNode;
+  subtitle?: ReactNode;
+  /** Lien optionnel aligné à droite (« Voir toutes nos expertises → »). */
+  link?: { href: React.ComponentProps<typeof Link>["href"]; label: string };
+  onDark?: boolean;
   align?: "left" | "center";
-  invert?: boolean;
   as?: "h1" | "h2" | "h3";
   className?: string;
 }) {
   return (
     <div
       className={cn(
-        "max-w-2xl",
-        align === "center" && "mx-auto text-center",
+        "flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between",
+        align === "center" && "sm:flex-col sm:items-center",
         className,
       )}
     >
-      {kicker ? (
-        <p
+      <div className={cn("max-w-2xl", align === "center" && "text-center")}>
+        {eyebrow ? (
+          <p className={cn("eyebrow", onDark && "on-dark", align === "center" && "justify-center")}>
+            {eyebrow}
+          </p>
+        ) : null}
+        <Tag
           className={cn(
-            "text-sm font-semibold uppercase tracking-[0.18em]",
-            invert ? "text-ocean-300" : "text-ocean-600",
+            "mt-3 text-2xl uppercase sm:text-3xl lg:text-[2.125rem]",
+            onDark ? "text-white" : "text-navy-900",
           )}
         >
-          {kicker}
-        </p>
-      ) : null}
-      <Tag
-        className={cn(
-          "mt-3 text-3xl sm:text-4xl lg:text-[2.75rem]",
-          invert ? "text-white" : "text-navy-900",
-          align === "left" && "rule-gold",
-          align === "center" &&
-            "after:mx-auto after:content-[''] after:block after:mt-4 after:h-[3px] after:w-14 after:bg-gold-500",
-        )}
-      >
-        {title}
-      </Tag>
-      {children ? (
-        <div
+          {title}
+        </Tag>
+        {subtitle ? (
+          <p
+            className={cn(
+              "mt-3 text-[0.95rem] leading-relaxed sm:text-base",
+              onDark ? "text-ink-200" : "text-ink-500",
+            )}
+          >
+            {subtitle}
+          </p>
+        ) : null}
+      </div>
+
+      {link ? (
+        <Link
+          href={link.href}
           className={cn(
-            "mt-4 text-base leading-relaxed sm:text-lg",
-            invert ? "text-steel-200" : "text-steel-600",
+            "group inline-flex shrink-0 items-center gap-1.5 font-display text-sm font-semibold",
+            onDark ? "text-brand-200 hover:text-white" : "text-brand-600 hover:text-brand-700",
           )}
         >
-          {children}
-        </div>
+          {link.label}
+          <Icon
+            name="ArrowRight"
+            className="h-4 w-4 transition-transform group-hover:translate-x-0.5"
+          />
+        </Link>
       ) : null}
     </div>
   );

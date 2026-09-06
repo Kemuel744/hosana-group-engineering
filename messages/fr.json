@@ -1,25 +1,35 @@
 {
   "nav": {
     "home": "Accueil",
+    "company": "L'entreprise",
     "about": "À propos",
+    "vision": "Notre vision",
+    "mission": "Notre mission",
+    "values": "Nos valeurs",
+    "team": "Notre équipe",
     "expertises": "Nos expertises",
-    "equipment": "Nos équipements",
+    "allExpertises": "Toutes nos expertises",
+    "equipment": "Nos moyens",
+    "allEquipment": "Tous nos moyens",
     "projects": "Nos réalisations",
-    "sectors": "Secteurs d'activité",
-    "documentation": "Documentation",
     "news": "Actualités",
     "contact": "Contact",
     "quote": "Demander un devis",
     "menu": "Menu",
     "close": "Fermer",
-    "openMenu": "Ouvrir le menu"
+    "openMenu": "Ouvrir le menu",
+    "search": "Rechercher",
+    "searchPlaceholder": "Rechercher une expertise, un moyen, une réalisation…",
+    "searchHint": "Saisissez au moins deux caractères.",
+    "searchEmpty": "Aucun résultat."
   },
   "common": {
     "quoteCta": "Demander un devis",
     "contactCta": "Nous contacter",
     "discoverExpertises": "Découvrir nos expertises",
     "learnMore": "En savoir plus",
-    "allExpertises": "Toutes nos expertises",
+    "allExpertises": "Voir toutes nos expertises",
+    "allProjects": "Voir toutes les réalisations",
     "backToExpertises": "Retour aux expertises",
     "services": "Prestations",
     "means": "Équipements & moyens mobilisables",
@@ -36,26 +46,25 @@
     "formReceived": "Merci. Vos informations ont été saisies (démonstration — aucun envoi réel pour le moment)."
   },
   "home": {
-    "heroKicker": "Ingénierie maritime, industrielle & infrastructurelle",
-    "heroTitle": "L'ingénierie au service de la mer, de l'industrie et des infrastructures",
-    "heroText": "HOSANA GROUP ENGINEERING conçoit, réalise et maintient des ouvrages et des équipements maritimes, industriels et technologiques, avec un haut niveau d'exigence, de sécurité et de qualité.",
-    "statsTitle": "Des moyens performants pour des résultats durables",
-    "expertisesKicker": "Nos métiers, vos solutions",
-    "expertisesTitle": "Une expertise multisectorielle intégrée",
-    "expertisesText": "De l'étude à la réalisation, jusqu'au contrôle et à la maintenance des ouvrages.",
-    "equipmentKicker": "Nos moyens au service de vos projets",
-    "equipmentTitle": "Nos équipements",
-    "equipmentText": "Dragues, pompes, barges, plateformes, équipements de plongée et matériels de chantier.",
-    "whyKicker": "Pourquoi nous faire confiance",
-    "whyTitle": "La convergence des métiers, la force de l'expérience",
-    "sectorsKicker": "Secteurs d'activité",
-    "sectorsTitle": "Des solutions pour chaque filière",
-    "valuesKicker": "Nos engagements",
-    "valuesTitle": "Ce qui guide chacune de nos interventions",
+    "heroKicker": "Ingénierie · Innovation · Durabilité",
+    "heroTitleLine1": "L'expertise qui",
+    "heroTitleLine2": "construit l'avenir",
+    "heroText": "HOSANA GROUP ENGINEERING accompagne vos projets maritimes, industriels et technologiques avec des solutions fiables, durables et adaptées à vos exigences.",
+    "heroImageCaption": "Des moyens performants pour des résultats durables",
+    "aboutEyebrow": "Qui sommes-nous ?",
+    "aboutHeading": "Une expertise au service de la mer, de l'industrie et du développement durable",
+    "aboutCta": "Découvrir notre entreprise",
+    "expertisesTitle2": "Nos domaines d'expertise",
+    "expertisesText2": "Des compétences complémentaires pour répondre aux projets les plus exigeants.",
+    "equipmentTitle2": "Nos moyens opérationnels",
+    "equipmentText2": "Des équipements performants pour des interventions efficaces.",
+    "equipmentLink": "Voir tous nos équipements",
+    "projectsTitle": "Nos réalisations",
+    "projectsText": "Des projets concrets qui témoignent de notre savoir-faire.",
     "partnersTitle": "Ils nous font confiance",
-    "partnersPlaceholder": "Les références clients seront affichées après confirmation écrite des autorisations d'usage des logos.",
-    "ctaTitle": "Un projet à réaliser ? Parlons de votre besoin.",
-    "ctaText": "Décrivez votre projet : nos équipes vous répondent avec une proposition technique adaptée."
+    "partnersText": "Des partenaires qui partagent notre vision.",
+    "ctaTitle": "Un projet à réaliser ?",
+    "ctaText": "Nos équipes sont à votre écoute pour vous accompagner dans vos projets maritimes, industriels et technologiques."
   },
   "about": {
     "title": "À propos",
@@ -66,33 +75,34 @@
     "vision": "Être un acteur de référence dans la convergence des métiers de la mer, de la technologie et du bâtiment, en apportant des solutions durables, sécurisées et à forte valeur ajoutée.",
     "missionTitle": "Notre mission",
     "mission": "Fournir des prestations de qualité supérieure, conformes aux normes internationales, en mobilisant une expertise multisectorielle afin de garantir la réussite et la sécurité des projets de nos clients.",
+    "valuesTitle": "Nos valeurs",
     "teamTitle": "Notre équipe, notre force",
     "teamText": "Une équipe pluridisciplinaire composée d'ingénieurs, de techniciens et d'experts engagés à relever les défis les plus complexes.",
     "strengthsTitle": "Nos atouts"
   },
   "expertises": {
     "title": "Nos expertises",
-    "kicker": "Nos métiers, vos solutions",
+    "eyebrow": "Nos métiers, vos solutions",
     "intro": "Une maîtrise complète des métiers de la mer, de l'industrie, du BTP, de la technologie et de l'énergie — pour répondre efficacement à tous vos projets.",
     "detailIntro": "Le besoin auquel nous répondons",
     "relatedCta": "Discuter de ce besoin"
   },
   "equipment": {
-    "title": "Nos équipements",
-    "kicker": "Nos moyens au service de vos projets",
+    "title": "Nos moyens",
+    "eyebrow": "Nos moyens au service de vos projets",
     "intro": "Le visiteur doit voir non seulement les services proposés, mais aussi les moyens disponibles pour les exécuter. Les caractéristiques détaillées seront renseignées par l'entreprise.",
     "specsNote": "Valeurs techniques à confirmer par HOSANA GROUP ENGINEERING."
   },
   "sectors": {
     "title": "Secteurs d'activité",
-    "kicker": "Des solutions pour chaque filière",
+    "eyebrow": "Des solutions pour chaque filière",
     "intro": "HOSANA GROUP ENGINEERING apporte ses solutions techniques intégrées aux principaux secteurs de l'économie régionale."
   },
   "projects": {
     "title": "Nos réalisations",
-    "kicker": "Preuves concrètes de capacité",
-    "intro": "Notre portfolio est en cours de constitution. Les études de cas — contexte, mission, travaux réalisés, équipements mobilisés et résultats — seront publiées après validation des contenus et des droits d'image par le client.",
-    "empty": "Études de cas à venir."
+    "eyebrow": "Preuves concrètes de capacité",
+    "intro": "Des projets concrets qui témoignent de notre savoir-faire. Les études de cas — contexte, mission, travaux réalisés, équipements mobilisés et résultats — seront publiées après validation des contenus et des droits d'image par le client.",
+    "empty": "Fiches détaillées des réalisations à venir."
   },
   "documentation": {
     "title": "Documentation",
@@ -142,13 +152,20 @@
     "submit": "Envoyer une demande de devis",
     "backendNote": "Traitement du formulaire (envoi, accusé de réception, anti-spam, suivi) à connecter au back-office lors de la phase de développement."
   },
+  "legal": {
+    "legalTitle": "Mentions légales",
+    "privacyTitle": "Politique de confidentialité",
+    "sitemapTitle": "Plan du site",
+    "placeholder": "Contenu à rédiger avec le client lors de la phase de cadrage (obligatoire avant mise en ligne — cf. cahier des charges §13/§19)."
+  },
   "footer": {
-    "tagline": "L'expertise au service de la mer, de l'industrie et du développement durable.",
-    "nav": "Navigation",
-    "expertises": "Expertises",
+    "tagline": "L'expertise au service de vos ambitions.",
+    "quickLinks": "Liens rapides",
+    "expertises": "Nos expertises",
     "contact": "Contact",
     "legal": "Mentions légales",
     "privacy": "Politique de confidentialité",
+    "sitemap": "Plan du site",
     "rights": "Tous droits réservés.",
     "disclaimer": "Site en cours de construction — contenus, chiffres et références en attente de validation par le client."
   }

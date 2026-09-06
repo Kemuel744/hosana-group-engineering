@@ -27,12 +27,25 @@ export interface Expertise {
 
 export interface EquipmentItem {
   slug: string;
+  icon: string;
   category: I18nText;
   name: I18nText;
+  /** Accroche courte affichée sur la grille d'accueil. */
+  tagline: I18nText;
   description: I18nText;
   /** Caractéristiques clés : libellé + valeur (valeurs à confirmer par le client). */
   specs: { label: I18nText; value: I18nText }[];
   applications: I18nText[];
+}
+
+export interface Realisation {
+  slug: string;
+  icon: string;
+  title: I18nText;
+  location: I18nText;
+  summary: I18nText;
+  /** Expertise(s) liée(s) — slugs. */
+  expertises: string[];
 }
 
 export interface Sector {

@@ -37,8 +37,9 @@ export const site = {
 
   contact: {
     email: "hosanage2000@gmail.com",
-    phones: ["+242 06 06 689 5788", "+242 04 418 3836"],
-    whatsapp: "+242 04 418 3836",
+    // Numéro affiché sur le template validé.
+    phones: ["+242 06 689 57 88"],
+    whatsapp: "+242 06 689 57 88",
     address: {
       line1: "Enceinte Institut Thomas Sankara",
       line2: "Quartier OCH",
@@ -52,13 +53,15 @@ export const site = {
   social: {
     facebook: "https://www.facebook.com/",
     linkedin: "https://www.linkedin.com/",
+    youtube: "https://www.youtube.com/",
   },
 
+  // Bandeau de confiance du hero — valeurs du template validé.
   stats: [
-    { value: "30", labelFr: "collaborateurs qualifiés", labelEn: "skilled staff" },
-    { value: "16+", labelFr: "domaines d'expertise", labelEn: "fields of expertise" },
-    { value: "5", labelFr: "secteurs stratégiques servis", labelEn: "strategic sectors served" },
-    { value: "H24", labelFr: "réactivité d'intervention", labelEn: "response readiness" },
+    { value: "16+", labelFr: "Domaines d'expertise", labelEn: "Fields of expertise" },
+    { value: "24/7", labelFr: "Capacité d'intervention", labelEn: "Response capacity" },
+    { value: "100%", labelFr: "Engagement qualité", labelEn: "Quality commitment" },
+    { value: "+50", labelFr: "Projets réalisés", labelEn: "Projects delivered" },
   ],
 } as const;
 

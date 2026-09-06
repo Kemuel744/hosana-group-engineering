@@ -37,80 +37,88 @@ export default async function AboutPage({
 
       <Section>
         <div className="grid gap-10 lg:grid-cols-3">
-          <p className="text-lg leading-relaxed text-steel-700 lg:col-span-2">
+          <p className="text-lg leading-relaxed text-ink-600 lg:col-span-2">
             {t("body")}
           </p>
-          <dl className="space-y-4 border-l-2 border-gold-500 pl-6 text-sm">
+          <dl className="space-y-4 border-l-2 border-brand-500 pl-6 text-sm">
             <div>
-              <dt className="font-semibold uppercase tracking-widest text-navy-900">
+              <dt className="font-display font-semibold uppercase tracking-wide text-navy-900">
                 {common("address")}
               </dt>
-              <dd className="mt-1 text-steel-600">
+              <dd className="mt-1 text-ink-500">
                 {site.contact.address.line1}, {site.contact.address.line2}
                 <br />
                 {site.contact.address.city}, {site.contact.address.country}
               </dd>
             </div>
             <div>
-              <dt className="font-semibold uppercase tracking-widest text-navy-900">
-                {loc === "en" ? "Coverage" : "Zone d'intervention"}
+              <dt className="font-display font-semibold uppercase tracking-wide text-navy-900">
+                {loc === "en" ? "Operating area" : "Zone d'intervention"}
               </dt>
-              <dd className="mt-1 text-steel-600">{site.foundedRegion}</dd>
+              <dd className="mt-1 text-ink-500">{site.foundedRegion}</dd>
             </div>
             <div>
-              <dt className="font-semibold uppercase tracking-widest text-navy-900">
+              <dt className="font-display font-semibold uppercase tracking-wide text-navy-900">
                 NIU
               </dt>
-              <dd className="mt-1 text-steel-600">{site.legalId}</dd>
+              <dd className="mt-1 text-ink-500">{site.legalId}</dd>
             </div>
           </dl>
         </div>
       </Section>
 
-      <Section tone="surface">
-        <div className="grid gap-8 lg:grid-cols-2">
-          <div className="border border-border bg-background p-8">
-            <span className="inline-flex h-12 w-12 items-center justify-center rounded-sm bg-navy-900 text-ocean-300">
-              <Icon name="Radar" className="h-6 w-6" />
+      <Section tone="muted">
+        <div className="grid gap-6 lg:grid-cols-2">
+          <div
+            id="vision"
+            className="scroll-mt-32 rounded-[var(--radius-card)] border border-border bg-background p-8"
+          >
+            <span className="inline-flex h-12 w-12 items-center justify-center rounded-md bg-navy-800 text-brand-300">
+              <Icon name="Binoculars" className="h-6 w-6" />
             </span>
-            <h2 className="mt-5 text-2xl text-navy-900">{t("visionTitle")}</h2>
-            <p className="mt-3 leading-relaxed text-steel-600">{t("vision")}</p>
+            <h2 className="mt-5 text-xl uppercase text-navy-900">{t("visionTitle")}</h2>
+            <p className="mt-3 leading-relaxed text-ink-500">{t("vision")}</p>
           </div>
-          <div className="border border-border bg-background p-8">
-            <span className="inline-flex h-12 w-12 items-center justify-center rounded-sm bg-navy-900 text-ocean-300">
-              <Icon name="Anchor" className="h-6 w-6" />
+          <div
+            id="mission"
+            className="scroll-mt-32 rounded-[var(--radius-card)] border border-border bg-background p-8"
+          >
+            <span className="inline-flex h-12 w-12 items-center justify-center rounded-md bg-navy-800 text-brand-300">
+              <Icon name="Target" className="h-6 w-6" />
             </span>
-            <h2 className="mt-5 text-2xl text-navy-900">{t("missionTitle")}</h2>
-            <p className="mt-3 leading-relaxed text-steel-600">{t("mission")}</p>
+            <h2 className="mt-5 text-xl uppercase text-navy-900">{t("missionTitle")}</h2>
+            <p className="mt-3 leading-relaxed text-ink-500">{t("mission")}</p>
           </div>
         </div>
       </Section>
 
-      <Section>
-        <SectionHeading title={t("teamTitle")}>{t("teamText")}</SectionHeading>
+      <Section id="equipe">
+        <SectionHeading title={t("teamTitle")} subtitle={t("teamText")} />
         <div className="mt-8 grid gap-4 sm:grid-cols-2">
           {atouts.map((a) => (
             <div
               key={a.fr}
-              className="flex items-start gap-3 border border-border bg-background p-5 text-sm text-steel-700"
+              className="flex items-start gap-3 rounded-[var(--radius-card)] border border-border bg-background p-5 text-sm text-ink-600"
             >
-              <Icon name="Check" className="mt-0.5 h-5 w-5 shrink-0 text-ocean-500" />
+              <Icon name="Check" className="mt-0.5 h-5 w-5 shrink-0 text-brand-500" />
               {tr(a, locale)}
             </div>
           ))}
         </div>
       </Section>
 
-      <Section tone="maritime">
-        <SectionHeading title={t("strengthsTitle")} invert align="center" />
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
+      <Section id="valeurs" tone="brand">
+        <SectionHeading onDark align="center" title={t("strengthsTitle")} />
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
           {valeurs.map((v) => (
             <div key={v.icon} className="text-center">
-              <span className="mx-auto inline-flex h-14 w-14 items-center justify-center rounded-full bg-white/10 text-ocean-200">
+              <span className="mx-auto inline-flex h-14 w-14 items-center justify-center rounded-full bg-white/10 text-brand-200">
                 <Icon name={v.icon} className="h-6 w-6" />
               </span>
-              <h3 className="mt-4 text-sm text-white">{tr(v.title, locale)}</h3>
-              <p className="mt-2 text-xs leading-relaxed text-steel-300">
+              <h3 className="mt-4 font-display text-sm font-semibold text-white">
+                {tr(v.title, locale)}
+              </h3>
+              <p className="mt-2 text-xs leading-relaxed text-ink-300">
                 {tr(v.description, locale)}
               </p>
             </div>
