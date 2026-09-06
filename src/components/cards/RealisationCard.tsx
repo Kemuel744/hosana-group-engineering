@@ -23,10 +23,19 @@ export async function RealisationCard({
         className,
       )}
     >
-      <MediaSlot bare icon={item.icon} className="aspect-[16/10]">
-        <div className="absolute inset-0 flex items-center justify-center text-white/30">
-          <Icon name={item.icon} className="h-9 w-9" />
-        </div>
+      <MediaSlot
+        bare
+        icon={item.icon}
+        src={item.image}
+        alt={t(item.title, locale)}
+        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+        className="aspect-[16/10]"
+      >
+        {!item.image ? (
+          <div className="absolute inset-0 flex items-center justify-center text-white/30">
+            <Icon name={item.icon} className="h-9 w-9" />
+          </div>
+        ) : null}
       </MediaSlot>
       <div className="flex flex-1 flex-col gap-2 p-5">
         <h3 className="font-display text-base font-semibold text-navy-900">

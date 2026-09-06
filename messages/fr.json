@@ -64,7 +64,11 @@
     "partnersTitle": "Ils nous font confiance",
     "partnersText": "Des partenaires qui partagent notre vision.",
     "ctaTitle": "Un projet à réaliser ?",
-    "ctaText": "Nos équipes sont à votre écoute pour vous accompagner dans vos projets maritimes, industriels et technologiques."
+    "ctaText": "Nos équipes sont à votre écoute pour vous accompagner dans vos projets maritimes, industriels et technologiques.",
+    "videoEyebrow": "En vidéo",
+    "videoTitle": "HOSANA en action",
+    "videoText": "Nos équipements et nos équipes en conditions réelles.",
+    "videoUnsupported": "Votre navigateur ne prend pas en charge la lecture vidéo."
   },
   "about": {
     "title": "À propos",

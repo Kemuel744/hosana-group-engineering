@@ -42,6 +42,7 @@ export const expertises: Expertise[] = [
     icon: "Waves",
     order: 2,
     featured: true,
+    image: "/media/expertises/dragage-maritime-fluvial.jpg",
     title: {
       fr: "Dragage maritime & fluvial",
       en: "Maritime & inland dredging",
@@ -73,6 +74,7 @@ export const expertises: Expertise[] = [
     icon: "LifeBuoy",
     order: 3,
     featured: true,
+    image: "/media/expertises/travaux-sous-marins-plongee.jpg",
     title: {
       fr: "Travaux sous-marins & plongée professionnelle",
       en: "Underwater works & professional diving",
@@ -360,6 +362,7 @@ export const expertises: Expertise[] = [
     icon: "Construction",
     order: 14,
     featured: false,
+    image: "/media/expertises/travaux-maritimes-portuaires.jpg",
     title: {
       fr: "Travaux maritimes & portuaires",
       en: "Maritime & port works",

@@ -1,6 +1,7 @@
 import { getLocale } from "next-intl/server";
 
 import { Icon } from "@/components/ui/Icon";
+import { MediaSlot } from "@/components/ui/MediaSlot";
 import { operationalStaff as staff } from "@/content/personnel";
 import { t as tr } from "@/content/types";
 
@@ -19,6 +20,18 @@ export async function OperationalStaff() {
       <p className="mt-2 text-[0.95rem] leading-relaxed text-ink-500">
         {tr(staff.intro, locale)}
       </p>
+
+      <MediaSlot
+        bare
+        src="/media/about/equipe-exploitation.png"
+        alt={
+          locale === "en"
+            ? "HOSANA operational crew on site"
+            : "Équipe d'exploitation HOSANA sur site"
+        }
+        sizes="(max-width: 1024px) 100vw, 66rem"
+        className="mt-8 aspect-[21/8] rounded-[var(--radius-card)]"
+      />
 
       {/* Effectifs par poste + total */}
       <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

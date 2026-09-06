@@ -11,6 +11,7 @@ export const realisations: Realisation[] = [
   {
     slug: "dragage-portuaire-pointe-noire",
     icon: "Waves",
+    image: "/media/expertises/dragage-maritime-fluvial.jpg",
     title: { fr: "Dragage portuaire", en: "Port dredging" },
     location: { fr: "Pointe-Noire, Congo", en: "Pointe-Noire, Congo" },
     summary: {
@@ -22,6 +23,7 @@ export const realisations: Realisation[] = [
   {
     slug: "construction-de-quai",
     icon: "Building2",
+    image: "/media/expertises/travaux-maritimes-portuaires.jpg",
     title: { fr: "Construction de quai", en: "Quay construction" },
     location: { fr: "Pointe-Noire, Congo", en: "Pointe-Noire, Congo" },
     summary: {
@@ -33,6 +35,7 @@ export const realisations: Realisation[] = [
   {
     slug: "inspection-sous-marine",
     icon: "LifeBuoy",
+    image: "/media/expertises/travaux-sous-marins-plongee.jpg",
     title: { fr: "Inspection sous-marine", en: "Underwater inspection" },
     location: { fr: "Congo", en: "Congo" },
     summary: {

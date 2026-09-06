@@ -5,6 +5,7 @@ import { CtaBanner } from "@/components/blocks/CtaBanner";
 import { OperationalStaff } from "@/components/blocks/OperationalStaff";
 import { PageHeader } from "@/components/blocks/PageHeader";
 import { Icon } from "@/components/ui/Icon";
+import { MediaSlot } from "@/components/ui/MediaSlot";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { t as tr } from "@/content/types";
@@ -95,16 +96,29 @@ export default async function AboutPage({
 
       <Section id="equipe">
         <SectionHeading title={t("teamTitle")} subtitle={t("teamText")} />
-        <div className="mt-8 grid gap-4 sm:grid-cols-2">
-          {atouts.map((a) => (
-            <div
-              key={a.fr}
-              className="flex items-start gap-3 rounded-[var(--radius-card)] border border-border bg-background p-5 text-sm text-ink-600"
-            >
-              <Icon name="Check" className="mt-0.5 h-5 w-5 shrink-0 text-brand-500" />
-              {tr(a, locale)}
-            </div>
-          ))}
+        <div className="mt-8 grid gap-8 lg:grid-cols-[1fr_20rem] lg:items-stretch">
+          <div className="grid gap-4 sm:grid-cols-2">
+            {atouts.map((a) => (
+              <div
+                key={a.fr}
+                className="flex items-start gap-3 rounded-[var(--radius-card)] border border-border bg-background p-5 text-sm text-ink-600"
+              >
+                <Icon name="Check" className="mt-0.5 h-5 w-5 shrink-0 text-brand-500" />
+                {tr(a, locale)}
+              </div>
+            ))}
+          </div>
+          <MediaSlot
+            bare
+            src="/media/about/equipe.png"
+            alt={
+              loc === "en"
+                ? "HOSANA Group Engineering field team"
+                : "Équipe de terrain HOSANA Group Engineering"
+            }
+            sizes="(max-width: 1024px) 100vw, 20rem"
+            className="h-64 rounded-[var(--radius-card)] lg:h-auto"
+          />
         </div>
 
         <OperationalStaff />

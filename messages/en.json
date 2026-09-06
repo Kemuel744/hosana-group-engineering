@@ -64,7 +64,11 @@
     "partnersTitle": "Trusted by",
     "partnersText": "Partners who share our vision.",
     "ctaTitle": "Have a project to deliver?",
-    "ctaText": "Our teams are ready to support you on your maritime, industrial and technological projects."
+    "ctaText": "Our teams are ready to support you on your maritime, industrial and technological projects.",
+    "videoEyebrow": "On video",
+    "videoTitle": "HOSANA in action",
+    "videoText": "Our equipment and teams in real operating conditions.",
+    "videoUnsupported": "Your browser does not support video playback."
   },
   "about": {
     "title": "About",

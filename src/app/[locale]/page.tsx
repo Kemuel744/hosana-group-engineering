@@ -7,6 +7,7 @@ import { ExpertiseGrid } from "@/components/home/ExpertiseGrid";
 import { Hero } from "@/components/home/Hero";
 import { PartnersRow } from "@/components/home/PartnersRow";
 import { RealisationsPreview } from "@/components/home/RealisationsPreview";
+import { VideoShowcase } from "@/components/home/VideoShowcase";
 
 export default async function HomePage({
   params,
@@ -22,6 +23,7 @@ export default async function HomePage({
       <AboutPreview />
       <ExpertiseGrid />
       <EquipmentStrip />
+      <VideoShowcase />
       <RealisationsPreview />
       <PartnersRow />
       <CtaBanner />

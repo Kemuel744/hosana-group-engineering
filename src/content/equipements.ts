@@ -13,6 +13,7 @@ export const equipements: EquipmentItem[] = [
   {
     slug: "drague-aspiratrice",
     icon: "Ship",
+    image: "/media/equipements/drague-aspiratrice.jpg",
     category: { fr: "Dragage", en: "Dredging" },
     name: { fr: "Dragues aspiratrices", en: "Suction dredgers" },
     tagline: {
@@ -38,6 +39,7 @@ export const equipements: EquipmentItem[] = [
   {
     slug: "pompe-de-dragage",
     icon: "Wrench",
+    image: "/media/equipements/pompe-de-dragage.jpg",
     category: { fr: "Dragage", en: "Dredging" },
     name: { fr: "Pompes de dragage", en: "Dredge pumps" },
     tagline: {
@@ -61,6 +63,7 @@ export const equipements: EquipmentItem[] = [
   {
     slug: "barges-plateformes",
     icon: "Sailboat",
+    image: "/media/equipements/barges-plateformes.jpg",
     category: { fr: "Moyens flottants", en: "Floating means" },
     name: { fr: "Barges et plateformes", en: "Barges and platforms" },
     tagline: {
@@ -85,6 +88,7 @@ export const equipements: EquipmentItem[] = [
   {
     slug: "equipements-de-plongee",
     icon: "LifeBuoy",
+    image: "/media/equipements/equipements-de-plongee.jpg",
     category: { fr: "Plongée", en: "Diving" },
     name: { fr: "Équipements de plongée", en: "Diving equipment" },
     tagline: {
@@ -108,6 +112,7 @@ export const equipements: EquipmentItem[] = [
   {
     slug: "pelle-longue-portee",
     icon: "Construction",
+    image: "/media/equipements/pelle-longue-portee.jpg",
     category: { fr: "Engins de chantier", en: "Site machinery" },
     name: { fr: "Pelles longue portée", en: "Long-reach excavators" },
     tagline: {
@@ -131,6 +136,7 @@ export const equipements: EquipmentItem[] = [
   {
     slug: "materiel-de-levage",
     icon: "Anchor",
+    image: "/media/equipements/materiel-de-levage.jpg",
     category: { fr: "Levage & chantier", en: "Lifting & site" },
     name: { fr: "Matériel de levage & de chantier", en: "Lifting & site equipment" },
     tagline: {

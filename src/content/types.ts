@@ -30,6 +30,8 @@ export interface Expertise {
 export interface EquipmentItem {
   slug: string;
   icon: string;
+  /** Chemin d'une photo (public/media/equipements/…) — sinon emplacement dégradé. */
+  image?: string;
   category: I18nText;
   name: I18nText;
   /** Accroche courte affichée sur la grille d'accueil. */
@@ -43,6 +45,8 @@ export interface EquipmentItem {
 export interface Realisation {
   slug: string;
   icon: string;
+  /** Chemin d'une photo (public/media/…) — sinon emplacement dégradé. */
+  image?: string;
   title: I18nText;
   location: I18nText;
   summary: I18nText;
