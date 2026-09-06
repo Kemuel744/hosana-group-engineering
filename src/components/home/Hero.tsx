@@ -17,13 +17,20 @@ export async function Hero() {
 
   return (
     <section className="relative isolate flex min-h-[36rem] flex-col overflow-hidden bg-navy-900 text-white lg:min-h-[42rem]">
-      {/* Image de fond — remplacer par une photo réelle de drague / port */}
+      {/* Image de fond — drague aspiratrice en sortie de port */}
       <MediaSlot
         bare
+        priority
+        src="/media/hero-home.png"
+        alt={
+          locale === "en"
+            ? "Suction dredger leaving port at sunrise"
+            : "Drague aspiratrice quittant le port au lever du jour"
+        }
+        sizes="100vw"
         className="absolute inset-0 -z-10"
-        /* src="/media/hero-drague.jpg" alt="Drague aspiratrice en opération portuaire" */
       />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-navy-950/92 via-navy-950/70 to-navy-950/30" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-navy-950/95 via-navy-950/72 to-navy-950/25" />
 
       <Container className="flex flex-1 flex-col justify-center py-16 lg:py-24">
         <p className="eyebrow on-dark">{t("heroKicker")}</p>

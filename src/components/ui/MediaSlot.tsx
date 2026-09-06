@@ -19,6 +19,8 @@ export function MediaSlot({
   alt,
   fill = true,
   bare = false,
+  priority = false,
+  sizes = "(max-width: 768px) 100vw, 33vw",
   className,
   overlay,
   children,
@@ -30,20 +32,28 @@ export function MediaSlot({
   fill?: boolean;
   /** Masque l'icône/le libellé intégrés (le parent fournit son propre contenu). */
   bare?: boolean;
+  /** Charge l'image en priorité (hero / LCP). */
+  priority?: boolean;
+  sizes?: string;
   className?: string;
   /** Voile sombre au-dessus de l'image (cartes à texte superposé). */
   overlay?: boolean;
   children?: ReactNode;
 }) {
   return (
-    <div className={cn("media-slot", className)} data-media-slot>
+    <div
+      className={cn("media-slot", className)}
+      data-media-slot
+      data-has-src={src ? "" : undefined}
+    >
       {src ? (
         <Image
           src={src}
           alt={alt ?? label ?? ""}
           fill={fill}
+          priority={priority}
           className="object-cover"
-          sizes="(max-width: 768px) 100vw, 33vw"
+          sizes={sizes}
         />
       ) : bare ? null : (
         <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 text-white/40">

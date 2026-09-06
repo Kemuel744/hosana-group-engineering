@@ -198,4 +198,8 @@
     );
     background-size: 16px 16px;
   }
+  /* Pas de trame quand une vraie image est chargée */
+  .media-slot[data-has-src]::after {
+    display: none;
+  }
 }
