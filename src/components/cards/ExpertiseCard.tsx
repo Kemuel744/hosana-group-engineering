@@ -26,6 +26,9 @@ export async function ExpertiseCard({
       <MediaSlot
         bare
         overlay
+        src={expertise.image}
+        alt={t(expertise.title, locale)}
+        sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
         className="aspect-[4/3] transition-transform duration-500 group-hover:scale-[1.04]"
       />
       <span className="absolute left-4 top-4 inline-flex h-9 w-9 items-center justify-center rounded-md bg-white/15 text-white backdrop-blur-sm">

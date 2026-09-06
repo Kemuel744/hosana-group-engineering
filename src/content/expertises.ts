@@ -11,6 +11,7 @@ export const expertises: Expertise[] = [
     icon: "Ship",
     order: 1,
     featured: true,
+    image: "/media/expertises/ingenierie-maritime-construction-navale.png",
     title: {
       fr: "Ingénierie maritime & construction navale",
       en: "Marine engineering & shipbuilding",

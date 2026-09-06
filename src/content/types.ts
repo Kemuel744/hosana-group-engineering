@@ -17,6 +17,8 @@ export interface Expertise {
   order: number;
   /** Mis en avant sur la page d'accueil. */
   featured: boolean;
+  /** Chemin d'une photo (public/media/expertises/…) — sinon emplacement dégradé. */
+  image?: string;
   title: I18nText;
   summary: I18nText;
   description: I18nText;

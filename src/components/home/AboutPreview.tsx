@@ -51,9 +51,15 @@ export async function AboutPreview() {
         {/* Colonne image */}
         <div className="lg:col-span-4">
           <MediaSlot
-            icon="Users"
-            label={locale === "en" ? "Team photo" : "Photo équipe"}
-            className="h-64 rounded-[var(--radius-card)] lg:h-full"
+            bare
+            src="/media/about-team.png"
+            alt={
+              locale === "en"
+                ? "HOSANA Group Engineering technician on a port site"
+                : "Technicien HOSANA Group Engineering sur un site portuaire"
+            }
+            sizes="(max-width: 1024px) 100vw, 33vw"
+            className="h-72 rounded-[var(--radius-card)] lg:h-full"
           />
         </div>
 
