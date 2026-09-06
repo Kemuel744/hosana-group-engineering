@@ -69,3 +69,9 @@ export interface Value {
   title: I18nText;
   description: I18nText;
 }
+
+export interface StaffRole {
+  icon: string;
+  count: number;
+  label: I18nText;
+}

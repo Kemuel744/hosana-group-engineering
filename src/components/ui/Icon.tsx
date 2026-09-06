@@ -43,6 +43,7 @@ import {
   Wrench,
   X,
   Youtube,
+  Zap,
 } from "lucide-react";
 
 /** Icônes référencées par clé depuis la couche de contenu et l'UI. */
@@ -90,6 +91,7 @@ const icons = {
   Wrench,
   X,
   Youtube,
+  Zap,
 } satisfies Record<string, LucideIcon>;
 
 export type IconName = keyof typeof icons;

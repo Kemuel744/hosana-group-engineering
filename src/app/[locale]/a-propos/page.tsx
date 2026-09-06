@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { getLocale, getTranslations, setRequestLocale } from "next-intl/server";
 
 import { CtaBanner } from "@/components/blocks/CtaBanner";
+import { OperationalStaff } from "@/components/blocks/OperationalStaff";
 import { PageHeader } from "@/components/blocks/PageHeader";
 import { Icon } from "@/components/ui/Icon";
 import { Section } from "@/components/ui/Section";
@@ -105,6 +106,8 @@ export default async function AboutPage({
             </div>
           ))}
         </div>
+
+        <OperationalStaff />
       </Section>
 
       <Section id="valeurs" tone="brand">
